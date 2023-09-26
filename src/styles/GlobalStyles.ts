@@ -4,7 +4,8 @@ export const GlobalStyles = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
     body {
-        font-family: ${({ theme }) => theme.fonts.primary};        
+        font-family: ${({ theme }) => theme.fonts.primary};
+        background-color: ${({ theme }) => theme.colors.gray.g50};
     }
     
     * {
