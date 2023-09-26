@@ -25,8 +25,9 @@
         "paths": {
             "@components/*": ["./components/*"],
             "@ui/*": ["./components/ui*"],
-            "@theme/*": ["./theme/*"],
-            "@styles/*": ["./styles/*"]
+            "@theme/*": ["./styles/theme/*"],
+            "@styles/*": ["./styles/*"],
+            "@assets/*": ["./assets/*"]
         }
     },
     "include": ["src"],
