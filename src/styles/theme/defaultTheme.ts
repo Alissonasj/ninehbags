@@ -26,4 +26,8 @@ export const DefaultTheme = {
         lg: "1.125rem",
         lx2: "1.25rem",
     },
+
+    sizes: {
+        gapx: "1.25rem",
+    },
 };

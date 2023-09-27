@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
-export const Logo = styled.img``;
-export const MenuNav = styled.nav``;
+export const MenuNav = styled.nav`
+    display: flex;
+    gap: ${({ theme }) => theme.sizes.gapx};
+    color: ${({ theme }) => theme.colors.gray.g800};
+    font-weight: 400;
+`;

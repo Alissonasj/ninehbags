@@ -1,8 +1,11 @@
+import Header from "@components/ui/Header";
+import { Grid } from "@styles/Grid";
+
 function App() {
     return (
-        <>
-            <h1>Olá Mundo!.</h1>
-        </>
+        <Grid>
+            <Header />
+        </Grid>
     );
 }
 

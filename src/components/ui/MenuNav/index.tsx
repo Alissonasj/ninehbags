@@ -1,19 +1,28 @@
 import Link from "@components/form/Link/inde";
-import * as S from "./styles"
+import * as S from "./styles";
+
 
 const MenuNav = () => {
-    return ( 
-        <S.Container>
-            <S.Logo src="" />
-
+    return (
             <S.MenuNav>
-                <Link path="#" children="Menu" />
-                <Link path="#" children="Menu" />
-                <Link path="#" children="Menu" />
-                <Link path="#" children="Menu" />
+                <Link
+                    path="#"
+                    children="Bolsas"
+                />
+                <Link
+                    path="#"
+                    children="Menu"
+                />
+                <Link
+                    path="#"
+                    children="Menu"
+                />
+                <Link
+                    path="#"
+                    children="A Nineh"
+                />
             </S.MenuNav>
-        </S.Container>
-     );
-}
- 
+    );
+};
+
 export default MenuNav;

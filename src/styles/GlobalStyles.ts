@@ -1,7 +1,39 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+export const GlobalStyles = createGlobalStyle`    
+
+
+    @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("../../src/assets/fonts/Montserrat-Regular.woff2") format("woff2")
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("../../src/assets/fonts/Montserrat-Medium.woff2") format("woff2")
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url("../../src/assets/fonts/Montserrat-SemiBold.woff2") format("woff2")
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("../../src/assets/fonts/Montserrat-Bold.woff2") format("woff2")
+    }
 
     body {
         font-family: ${({ theme }) => theme.fonts.primary};
