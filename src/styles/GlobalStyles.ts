@@ -67,8 +67,7 @@ export const GlobalStyles = createGlobalStyle`
         list-style-type: none;
     }
 
-    img {
-        max-width: 100%;
+    img {        
         display: block;
     }
 

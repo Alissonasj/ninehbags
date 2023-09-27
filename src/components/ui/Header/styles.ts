@@ -1,3 +1,4 @@
+import { device } from "@styles/breakPoints";
 import styled from "styled-components";
 
 export const Header = styled.header`
@@ -15,6 +16,10 @@ export const Header = styled.header`
 
     & > nav {
         justify-content: center;
+
+        @media ${device.md} {
+            grid-area: right;
+        }
     }
 `;
 export const Logo = styled.img``;

@@ -19,7 +19,7 @@ const MenuNav = () => {
                 />
                 <Link
                     path="#"
-                    children="A Nineh"
+                    children="Nineh"
                 />
             </S.MenuNav>
     );
