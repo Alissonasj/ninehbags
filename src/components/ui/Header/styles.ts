@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     grid-area: center;
-    padding-top: ${({theme}) => theme.sizes.gapx};
-    padding-bottom: ${({theme}) => theme.sizes.gapx};
-`
-export const Logo = styled.img``
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "left center right";
+    align-items: center;
+
+    margin-top: ${({ theme }) => theme.sizes.gapx};
+    margin-bottom: ${({ theme }) => theme.sizes.gapx};
+
+    text-transform: uppercase;
+
+    & > nav {
+        justify-content: center;
+    }
+`;
+export const Logo = styled.img``;

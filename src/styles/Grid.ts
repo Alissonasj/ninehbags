@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { device } from "./breakPoints";
 
 export const Grid = styled.div`
     display: grid;
@@ -7,12 +6,4 @@ export const Grid = styled.div`
     grid-template-rows: auto 1fr;
     grid-template-areas: ". center .";
     height: 100svh;
-
-    @media ${device.xl} {
-        grid-template-columns: 1fr 1144px 1fr;
-    }
-
-    @media ${device.lg} {
-        grid-template-columns: 1fr 79% 1fr;
-    }
 `;
