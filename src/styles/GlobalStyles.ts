@@ -67,7 +67,7 @@ export const GlobalStyles = createGlobalStyle`
         list-style-type: none;
     }
 
-    img {        
+    img {                
         display: block;
     }
 

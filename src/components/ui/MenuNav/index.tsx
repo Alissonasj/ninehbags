@@ -1,27 +1,14 @@
-import Link from "@components/form/Link/inde";
+import LinkBasic from "@components/form/LinkBasic/index";
 import * as S from "./styles";
-
 
 const MenuNav = () => {
     return (
-            <S.MenuNav>
-                <Link
-                    path="#"
-                    children="Bolsas"
-                />
-                <Link
-                    path="#"
-                    children="Menu"
-                />
-                <Link
-                    path="#"
-                    children="Menu"
-                />
-                <Link
-                    path="#"
-                    children="Nineh"
-                />
-            </S.MenuNav>
+        <S.MenuNav>
+            <LinkBasic children="Bolsas" />
+            <LinkBasic children="Menu" />
+            <LinkBasic children="Menu" />
+            <LinkBasic children="A-Nineh" />
+        </S.MenuNav>
     );
 };
 

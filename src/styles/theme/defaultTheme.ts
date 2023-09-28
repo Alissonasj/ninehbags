@@ -29,5 +29,7 @@ export const DefaultTheme = {
 
     sizes: {
         gapx: "1.25rem",
+        radius: "0.3125rem",
+        paddingbutton: "1.25rem 2.5rem",
     },
 };
