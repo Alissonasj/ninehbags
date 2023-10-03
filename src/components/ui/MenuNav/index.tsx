@@ -1,13 +1,13 @@
-import LinkBasic from "@components/form/LinkBasic/index";
+import { Link } from "@components/Link";
 import * as S from "./styles";
 
 const MenuNav = () => {
     return (
         <S.MenuNav>
-            <LinkBasic children="Bolsas" />
-            <LinkBasic children="Menu" />
-            <LinkBasic children="Menu" />
-            <LinkBasic children="A-Nineh" />
+            <Link.Nav children="Bolsas" />
+            <Link.Nav children="Menu" />
+            <Link.Nav children="Menu" />
+            <Link.Nav children="Nineh" />
         </S.MenuNav>
     );
 };

@@ -21,15 +21,16 @@ export const DefaultTheme = {
     },
 
     text: {
-        xs: "0.875rem",
-        md: "1rem",
-        lg: "1.125rem",
-        lx2: "1.25rem",
+        px14: "0.875rem",
+        px16: "1rem",
+        px18: "1.125rem",
+        px20: "1.25rem",
     },
 
-    sizes: {
+    spacing: {
         gapx: "1.25rem",
-        radius: "0.3125rem",
-        paddingbutton: "1.25rem 2.5rem",
+        radius: "0.3125rem",        
+        paddingy: "1.25rem",
+        paddingx: "2.5rem",
     },
 };

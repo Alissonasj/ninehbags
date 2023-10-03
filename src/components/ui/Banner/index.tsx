@@ -1,12 +1,13 @@
 import bannerDesktop from "@assets/imgs/banner_desk.jpg";
-import LinkButton from "@components/form/LinkButton";
+
+import { Link } from "@components/Link";
 import * as S from "./styles";
 
 const Banner = () => {
     return (
         <S.Banner>
             <S.BannerImg src={bannerDesktop} />
-            <LinkButton children="Novidade" />
+            <Link.Button children="Novidade" />
         </S.Banner>
     );
 };

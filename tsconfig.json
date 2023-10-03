@@ -27,8 +27,7 @@
             "@ui/*": ["./components/ui*"],
             "@theme/*": ["./styles/theme/*"],
             "@styles/*": ["./styles/*"],
-            "@assets/*": ["./assets/*"],
-            "@form/*": ["./components/form*"],
+            "@assets/*": ["./assets/*"],            
         }
     },
     "include": ["src"],

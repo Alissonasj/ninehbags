@@ -9,10 +9,8 @@ export const Header = styled.header`
     grid-template-areas: "left center right";
     align-items: center;
 
-    margin-top: ${({ theme }) => theme.sizes.gapx};
-    margin-bottom: ${({ theme }) => theme.sizes.gapx};
-
-    text-transform: uppercase;
+    margin-top: ${({ theme }) => theme.spacing.gapx};
+    margin-bottom: ${({ theme }) => theme.spacing.gapx};
 
     & > nav {
         justify-content: center;
