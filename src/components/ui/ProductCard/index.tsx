@@ -9,13 +9,11 @@ interface ProductCardProps {
 
 const ProductCard = ({ pathLink = "#", srcImg, product }: ProductCardProps) => {
     return (
-        <S.Container>
-            <S.ProductLink href={pathLink}>
-                <S.ProductImg src={srcImg} />
-                <S.ProductName children={product?.name} />
-                <S.ProductPrice children={product?.price} />
-            </S.ProductLink>
-        </S.Container>
+        <S.ProductLink href={pathLink}>
+            <S.ProductImg src={srcImg} />
+            <S.ProductName children={product?.name} />
+            <S.ProductPrice children={product?.price} />
+        </S.ProductLink>
     );
 };
 
