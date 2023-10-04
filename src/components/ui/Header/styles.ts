@@ -2,7 +2,7 @@ import { device } from "@styles/breakPoints";
 import styled from "styled-components";
 
 export const Header = styled.header`
-    grid-area: center;
+    grid-area: header;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);

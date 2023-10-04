@@ -15,6 +15,6 @@ export const LinkButton = styled.a`
     padding-inline: ${({ theme }) => theme.spacing.paddingx};
     padding-top: ${({ theme }) => theme.spacing.paddingy};
     padding-bottom: ${({ theme }) => theme.spacing.paddingy};
-    background-color: ${({ theme }) => theme.colors.gray.g800};
+    background-color: ${({ theme }) => theme.colors.gray.g900};
     border-radius: ${({ theme }) => theme.spacing.radius};
 `;

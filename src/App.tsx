@@ -1,12 +1,14 @@
-import Banner from "@components/ui/Banner";
-import Header from "@components/ui/Header";
 import { Grid } from "@styles/Grid";
+import Banner from "@ui/Banner";
+import Header from "@ui/Header";
+import ProductSection from "@ui/ProductSection";
 
 function App() {
     return (
         <Grid>
             <Header />
             <Banner />
+            <ProductSection />
         </Grid>
     );
 }

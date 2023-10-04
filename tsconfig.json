@@ -23,11 +23,12 @@
         /* Paths */
         "baseUrl": "./src",
         "paths": {
+            "@ui/*": ["./components/ui/*"],
             "@components/*": ["./components/*"],
-            "@ui/*": ["./components/ui*"],
             "@theme/*": ["./styles/theme/*"],
             "@styles/*": ["./styles/*"],
-            "@assets/*": ["./assets/*"],            
+            "@assets/*": ["./assets/*"],
+            "@myTypes/*": ["./types/*"]
         }
     },
     "include": ["src"],

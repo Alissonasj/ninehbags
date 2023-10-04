@@ -2,8 +2,8 @@ import { device } from "@styles/breakPoints";
 import styled from "styled-components";
 
 export const Banner = styled.div`
-    grid-area: banner;
-    grid-row: 2;
+    grid-area:  banner;
+
     height: 700px;
     position: relative;
 
