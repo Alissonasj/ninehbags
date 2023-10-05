@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const ProductLink = styled.a`
-    max-width: 460px;
-`;
+export const ProductLink = styled.a``;
 
 export const ProductImg = styled.img`
     margin-bottom: 1rem;

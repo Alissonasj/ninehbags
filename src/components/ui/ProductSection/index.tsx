@@ -25,6 +25,22 @@ const ProductSection = () => {
                     srcImg={product}
                     product={{ name: "Moon Bag", price: "R$99,00" }}
                 />
+                <ProductCard
+                    srcImg={product}
+                    product={{ name: "Moon Bag", price: "R$99,00" }}
+                />
+                <ProductCard
+                    srcImg={product}
+                    product={{ name: "Moon Bag", price: "R$99,00" }}
+                />
+                <ProductCard
+                    srcImg={product}
+                    product={{ name: "Moon Bag", price: "R$99,00" }}
+                />
+                <ProductCard
+                    srcImg={product}
+                    product={{ name: "Moon Bag", price: "R$99,00" }}
+                />
             </S.GridProductSection>
         </S.ProductSection>
     );
