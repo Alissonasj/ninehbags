@@ -7,7 +7,7 @@
         "skipLibCheck": true,
 
         /* Bundler mode */
-        "moduleResolution": "bundler",
+        "moduleResolution": "Node10",
         "allowImportingTsExtensions": true,
         "resolveJsonModule": true,
         "isolatedModules": true,
@@ -28,7 +28,8 @@
             "@theme/*": ["./styles/theme/*"],
             "@styles/*": ["./styles/*"],
             "@assets/*": ["./assets/*"],
-            "@myTypes/*": ["./types/*"]
+            "@myTypes/*": ["./types/*"],
+            "@hooks/*": ["./hooks/*"],
         }
     },
     "include": ["src"],

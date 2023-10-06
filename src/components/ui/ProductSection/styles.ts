@@ -18,8 +18,7 @@ export const GridProductSection = styled.div`
     display: grid;
     grid-column-gap: 1.25rem;
     grid-row-gap: 2.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
-    
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));    
 
     @media ${device.md} {
         grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
