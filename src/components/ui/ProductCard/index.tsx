@@ -1,20 +1,11 @@
-import Product from "@myTypes/product";
-import * as S from "./styles";
+import ProductCardContainer from "./ProductCardContainer";
+import ProductCardImg from "./ProductCardImg";
+import ProductCardIformation from "./ProductCardInformation";
 
-interface ProductCardProps {
-    pathLink?: string;    
-    product?: Product;
-}
-
-const ProductCard = ({ pathLink = "#",  product }: ProductCardProps) => {
-    return (
-        
-        <S.ProductLink key={product?.id} href={pathLink}>
-            <S.ProductImg src={product?.img} />
-            <S.ProductName children={product?.name} />
-            <S.ProductPrice children={product?.price} />
-        </S.ProductLink>
-    );
+const ProductCard = {
+    Container: ProductCardContainer,
+    Img: ProductCardImg,
+    Information: ProductCardIformation,
 };
 
 export default ProductCard;

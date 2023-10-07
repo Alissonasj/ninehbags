@@ -1,8 +1,8 @@
 import useFetch from "@hooks/useFetch";
+import Product from "@myTypes/product";
 import MenuNav from "@ui/MenuNav";
 import ProductCard from "@ui/ProductCard";
 import * as S from "./styles";
-import Product from "@myTypes/product";
 
 const ProductSection = () => {
     const { dataFecth: products } = useFetch("http://localhost:3000/products");
@@ -14,15 +14,16 @@ const ProductSection = () => {
             <S.GridProductSection>
                 {products.map((product: Product) => {
                     return (
-                        <ProductCard
+                        <ProductCard.Container
                             key={product.id}
-                            product={{
-                                id: product.id,
-                                img: product.img,
-                                name: product.name,
-                                price: product.price,
-                            }}
-                        />
+                            pathLink="#"
+                        >
+                            <ProductCard.Img img={product.img} />
+                            <ProductCard.Information
+                                name={product.name}
+                                price={product.price}
+                            />
+                        </ProductCard.Container>
                     );
                 })}
             </S.GridProductSection>
