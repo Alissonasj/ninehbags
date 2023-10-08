@@ -8,9 +8,8 @@ export const ProductSection = styled.section`
     width: 90%;
     margin-top: 6.25rem;
 
-    & > nav {
-        margin-bottom: 2.5rem;
-        justify-content: center;
+    & > ul {
+        margin-bottom: 2.5rem;        
     }
 `;
 

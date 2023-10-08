@@ -12,9 +12,7 @@ export const Header = styled.header`
     margin-top: ${({ theme }) => theme.spacing.gapx};
     margin-bottom: ${({ theme }) => theme.spacing.gapx};
 
-    & > nav {
-        justify-content: center;
-
+    & > nav {        
         @media ${device.md} {
             grid-area: right;
         }

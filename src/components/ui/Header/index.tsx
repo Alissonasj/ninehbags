@@ -1,6 +1,6 @@
-import MenuNav from "../MenuNav";
-import * as S from "./styles";
 import logo from "@assets/imgs/logo.svg";
+import MenuNav from "./MenuNav";
+import * as S from "./styles";
 
 const Header = () => {
     return (

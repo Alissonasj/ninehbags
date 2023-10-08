@@ -1,7 +1,7 @@
 import useFetch from "@hooks/useFetch";
 import Product from "@myTypes/product";
-import MenuNav from "@ui/MenuNav";
 import ProductCard from "@ui/ProductCard";
+import ProductMenuNav from "./ProductMenuNav";
 import * as S from "./styles";
 
 const ProductSection = () => {
@@ -9,7 +9,7 @@ const ProductSection = () => {
 
     return (
         <S.ProductSection>
-            <MenuNav />
+            <ProductMenuNav />
 
             <S.GridProductSection>
                 {products.map((product: Product) => {

@@ -21,16 +21,27 @@ export const DefaultTheme = {
     },
 
     text: {
-        px14: "0.875rem",
-        px16: "1rem",
-        px18: "1.125rem",
-        px20: "1.25rem",
+        sm: "0.875rem", // 14px
+        md: "1rem", // 16px
+        lg: "1.125rem", // 18px
+        xl: "1.25rem", // 20px
     },
 
     spacing: {
-        gapx: "1.25rem",
-        radius: "0.3125rem",        
-        paddingy: "1.25rem",
-        paddingx: "2.5rem",
+        button: {
+            lg_py: "1.25rem", // 20px
+            lg_px: "2.5rem", // 40px
+        },
+
+        link: {
+            sm_py: "0.3125rem", // 5px
+            sm_px: "0.625rem", // 10px
+        },
+
+        gapx: "1.25rem", // 20px
+    },
+
+    radius: {
+        sm: "0.3125rem", // 5px
     },
 };
