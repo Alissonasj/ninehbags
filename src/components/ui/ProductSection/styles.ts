@@ -5,7 +5,7 @@ export const ProductSection = styled.section`
     grid-area: main;
     justify-self: center;
 
-    width: 90%;
+    width: 100%;
     margin-top: 6.25rem;
 
     & > ul {
