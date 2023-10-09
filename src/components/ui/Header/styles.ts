@@ -18,4 +18,7 @@ export const Header = styled.header`
         }
     }
 `;
-export const Logo = styled.img``;
+
+export const Logo = styled.img`
+    width: auto;
+`;

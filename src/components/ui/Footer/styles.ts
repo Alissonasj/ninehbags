@@ -1,8 +1,14 @@
 import styled from "styled-components";
 
-export const Footer = styled.footer``
+export const Footer = styled.footer`
+    grid-area: footer;
 
-export const Container = styled.div``
+    background-color: ${({theme}) => theme.colors.gray.g900};
+`
+
+export const Container = styled.div`
+    padding: 5rem;
+`
 
 export const Header = styled.div``
 

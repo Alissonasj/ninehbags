@@ -1,4 +1,4 @@
-import logo from "@assets/imgs/logo.svg";
+import logo from "@assets/imgs/black_logo.svg";
 import MenuNav from "./MenuNav";
 import * as S from "./styles";
 

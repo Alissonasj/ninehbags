@@ -69,6 +69,7 @@ export const GlobalStyles = createGlobalStyle`
 
     img {                
         display: block;
+        width: 100%;
     }
 
     table {
