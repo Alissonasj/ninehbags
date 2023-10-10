@@ -1,9 +1,16 @@
+import { ReactNode } from "react";
 import * as S from "./styles";
 
-const FooterNav = () => {
+interface FooterProps {
+    title?: string;
+    children?: ReactNode;
+}
+
+const FooterNav = ({ title, children }: FooterProps) => {
     return (
         <S.MenuList>
-            <S.MenuItem />
+            <S.MenuTitle>{title}</S.MenuTitle>
+            <S.MenuItem>{children}</S.MenuItem>
         </S.MenuList>
     );
 };

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const ProductCardContainer = styled.a``; 
+export const ProductCardContainer = styled.a`
+
+`; 
 
 export const ProductCardImg = styled.img`
     margin-bottom: 1rem;
