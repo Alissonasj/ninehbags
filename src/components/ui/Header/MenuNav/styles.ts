@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const MenuNav = styled.nav``;
+export const MenuNav = styled.nav`
+    @media (max-width: 768px) { // Implementar menu hamburger
+        display: none;
+    }
+`;
 
 export const MenuList = styled.ul`
     display: flex;

@@ -11,6 +11,10 @@ export const Banner = styled.div`
         height: 600px;
     }
 
+    @media ${device.sm} {
+        height: 500px;
+    }
+
     & > a {
         position: absolute;
         transform: translate(-50%, -50%);

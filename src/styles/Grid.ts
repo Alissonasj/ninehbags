@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { device } from "./breakPoints";
 
 export const Grid = styled.div`
     display: grid;
@@ -9,11 +8,10 @@ export const Grid = styled.div`
         "banner banner banner"
         ". main ."
         "footer footer footer";
-        
-    /* grid-template-rows: auto 1fr; */
+
     height: 100svh;
 
-    @media ${device.md} {
+    @media (max-width: 768px) {
         grid-template-columns: 1.25rem 1fr 1.25rem;
     }
 `;

@@ -17,9 +17,17 @@ export const GridProductSection = styled.div`
     display: grid;
     grid-column-gap: 1.25rem;
     grid-row-gap: 2.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    grid-template-columns: repeat(4, 1fr);
 
-    @media ${device.md} {
-        grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+    @media (max-width: 1100px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media ${device.sm} {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media ${device.xs} {
+        grid-template-columns: 1fr;
     }
 `;
