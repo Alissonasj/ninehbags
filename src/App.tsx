@@ -1,4 +1,4 @@
-import Home from "@pages/home";
+import ProductPage from "@pages/ProductPage/product";
 import { Grid } from "@styles/Grid";
 import Footer from "@ui/Footer";
 import Header from "@ui/Header";
@@ -8,7 +8,7 @@ function App() {
         <>
             <Grid>
                 <Header />
-                <Home />
+                <ProductPage />
                 <Footer />
             </Grid>
         </>
