@@ -29,7 +29,8 @@
             "@styles/*": ["./styles/*"],
             "@assets/*": ["./assets/*"],
             "@myTypes/*": ["./types/*"],
-            "@hooks/*": ["./hooks/*"]
+            "@hooks/*": ["./hooks/*"],
+            "@pages/*": ["./pages/*"]
         }
     },
     "include": ["src"],
