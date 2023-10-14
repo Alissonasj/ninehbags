@@ -2,37 +2,30 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     grid-area: main;
-    height: 100svh;
+    margin: 2.5rem 0;
 `;
 
 export const ProductSection = styled.section`
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 25rem;
     column-gap: 2.5rem;
-    height: 100%; //remover
 `;
 
-export const Gallery = styled.div`
-    background-color: gray;//
-`;
+export const Gallery = styled.div``;
 
 export const GridGalleryList = styled.ul`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.25rem;
-    height: 100%; //
+    justify-items: center;
 `;
 
-export const GalleryItem = styled.li`   
-    background-color: yellow;//    
+export const GalleryItem = styled.li`
+    max-width: 500px;
 `;
+
+export const GalleryImg = styled.img``;
 
 export const ProductInfoWrapper = styled.div`
-    background-color: brown;//
-    padding: 20px;//
-`;
-
-export const ProdcutInfo = styled.div`
-    background-color: green; //
-    height: 100%; //
+    padding: 20px; //
 `;
