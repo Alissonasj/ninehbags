@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 
 export const ProductSection = styled.section`
     display: grid;
-    grid-template-columns: 1fr 25rem;
+    grid-template-columns: 1fr 30rem;
     column-gap: 2.5rem;
 `;
 

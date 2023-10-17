@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
-const useFetch = (url: string) => {
-    const [dataFecth, setDataFecth] = useState([]);
+ const useFetch = <T>(endPoint: string, initialState: T) => {
+    const [dataFecth, setDataFecth] = useState<T>(initialState);
 
     useEffect(() => {
         (async () => {
-            const response = await fetch(url);
+            const response = await fetch(`http://localhost:3000/${endPoint}`);
             console.log(response.ok);
 
             const data = await response.json();
@@ -13,9 +13,9 @@ const useFetch = (url: string) => {
 
             setDataFecth(data);
         })();
-    }, [url]);
+    }, [endPoint]);
 
-    return { dataFecth };
+    return dataFecth;
 };
 
 export default useFetch;

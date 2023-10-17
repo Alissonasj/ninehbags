@@ -30,7 +30,8 @@
             "@assets/*": ["./assets/*"],
             "@myTypes/*": ["./types/*"],
             "@hooks/*": ["./hooks/*"],
-            "@pages/*": ["./pages/*"]
+            "@pages/*": ["./pages/*"],
+            "@funtions/*": ["./functions/*"]
         }
     },
     "include": ["src"],

@@ -6,7 +6,7 @@ const ProductCardContainer = ({
     pathLink = "#",
 }: ProductCardProps) => {
     return (
-        <S.ProductCardContainer href={pathLink}>
+        <S.ProductCardContainer to={pathLink}>
             {children}
         </S.ProductCardContainer>
     );

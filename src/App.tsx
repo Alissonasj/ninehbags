@@ -1,14 +1,14 @@
-import ProductPage from "@pages/ProductPage/product";
 import { Grid } from "@styles/Grid";
 import Footer from "@ui/Footer";
 import Header from "@ui/Header";
+import { Outlet } from "react-router-dom";
 
 function App() {
     return (
         <>
             <Grid>
                 <Header />
-                <ProductPage />
+                <Outlet />
                 <Footer />
             </Grid>
         </>

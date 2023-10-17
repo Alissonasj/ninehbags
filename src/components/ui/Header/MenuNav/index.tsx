@@ -5,8 +5,8 @@ const MenuNav = () => {
     return (
         <S.MenuNav>
             <S.MenuList>
-                <Link.Nav>
-                    <S.MenuItem children="Menu" />
+                <Link.Nav pathLink="/">
+                    <S.MenuItem children="Home" />
                 </Link.Nav>
 
                 <Link.Nav>
