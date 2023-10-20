@@ -1,4 +1,3 @@
-import getProducts from "@funtions/getProducts";
 import ProductPage from "@pages/ProductPage";
 import Home from "@pages/home";
 import App from "App";
@@ -19,12 +18,12 @@ const router = createBrowserRouter(
             <Route
                 path="/"
                 element={<Home />}
-                loader={getProducts}
+                // loader={getProducts} // recupera os dados da função com o hook useLoaderData na rota
             />
             <Route
                 path="product/:productId"
                 element={<ProductPage />}
-                
+                // loader={getProducts}
             />
         </Route>
     )

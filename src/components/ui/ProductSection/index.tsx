@@ -1,17 +1,17 @@
+import useFetch from "@hooks/useFetch";
 import Product from "@myTypes/product";
 import ProductCard from "@ui/ProductCard";
-import { useLoaderData } from "react-router-dom";
 import ProductMenuNav from "./ProductMenuNav";
 import * as S from "./styles";
 
 const ProductSection = () => {
-    const products = useLoaderData() as Product[];
+    const products = useFetch("http://localhost:3000/products") as Product[];
 
     return (
         <S.ProductSection>
             <ProductMenuNav />
             <S.GridProductSection>
-                {products.map((product) => {
+                {products?.map((product) => {
                     return (
                         <ProductCard.Container
                             key={product.id}
