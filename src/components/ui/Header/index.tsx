@@ -5,8 +5,10 @@ import * as S from "./styles";
 const Header = () => {
     return (
         <S.Header>
-            <S.Logo src={logo} />
-            <MenuNav />
+            <S.Container>
+                <S.Logo src={logo} />
+                <MenuNav />
+            </S.Container>
         </S.Header>
     );
 };

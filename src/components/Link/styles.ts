@@ -1,12 +1,23 @@
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const LinkNav = styled.a`
+export const LinkNav = styled(NavLink)`
+    font-size: ${({ theme }) => theme.text.lg};
+    font-weight: 400;
+    color: ${({ theme }) => theme.colors.gray.g800};
+
+    /* &.active {
+        border: 1px solid red;
+    } */
+`;
+
+export const LinkGeneric = styled(Link)`
     font-size: ${({ theme }) => theme.text.lg};
     font-weight: 400;
     color: ${({ theme }) => theme.colors.gray.g800};
 `;
 
-export const LinkButton = styled.a`
+export const LinkButton = styled(Link)`
     font-weight: 600;
     font-size: ${({ theme }) => theme.text.lg};
     text-transform: uppercase;

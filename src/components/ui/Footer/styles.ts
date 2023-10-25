@@ -10,6 +10,9 @@ export const Footer = styled.footer`
 export const Container = styled.div`
     padding: 5rem;
 
+    @media (max-width: 768px) {
+        padding: 1.25rem;
+    }
 `;
 
 export const Header = styled.div`

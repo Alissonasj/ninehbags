@@ -4,21 +4,21 @@ import * as S from "./styles";
 const ProductMenuNav = () => {
     return (
         <S.ProductMenuList>
-            <Link.Nav>
+            <Link.Generic>
                 <S.ProductMenuItem children="Bolsa" />
-            </Link.Nav>
-            <Link.Nav>
+            </Link.Generic>
+            <Link.Generic>
                 <S.ProductMenuItem children="Bolsa" />
-            </Link.Nav>
-            <Link.Nav>
+            </Link.Generic>
+            <Link.Generic>
                 <S.ProductMenuItem children="Bolsa" />
-            </Link.Nav>
-            <Link.Nav>
+            </Link.Generic>
+            <Link.Generic>
                 <S.ProductMenuItem children="Bolsa" />
-            </Link.Nav>
-            <Link.Nav>
+            </Link.Generic>
+            <Link.Generic>
                 <S.ProductMenuItem children="Bolsa" />
-            </Link.Nav>
+            </Link.Generic>
         </S.ProductMenuList>
     );
 };

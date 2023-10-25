@@ -1,17 +1,17 @@
-import { Grid } from "@styles/Grid";
-import Banner from "@ui/Banner";
+import * as S from "@styles/Template";
 import Footer from "@ui/Footer";
 import Header from "@ui/Header";
-import ProductSection from "@ui/ProductSection";
+import { Outlet } from "react-router-dom";
 
 function App() {
     return (
-        <Grid>
-            <Header />
-            <Banner />
-            <ProductSection />
-            <Footer />
-        </Grid>
+        <>    
+            <S.Grid>
+                <Header />
+                <Outlet />
+                <Footer />
+            </S.Grid>
+        </>
     );
 }
 

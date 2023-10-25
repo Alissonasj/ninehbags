@@ -5,18 +5,17 @@ import ProductMenuNav from "./ProductMenuNav";
 import * as S from "./styles";
 
 const ProductSection = () => {
-    const { dataFecth: products } = useFetch("http://localhost:3000/products");
+    const products = useFetch("http://localhost:3000/products") as Product[];
 
     return (
         <S.ProductSection>
             <ProductMenuNav />
-
             <S.GridProductSection>
-                {products.map((product: Product) => {
+                {products?.map((product) => {
                     return (
                         <ProductCard.Container
                             key={product.id}
-                            pathLink="#"
+                            pathLink={`product/${product.id}`}
                         >
                             <ProductCard.Img img={product.img} />
                             <ProductCard.Information

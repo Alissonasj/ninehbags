@@ -4,7 +4,7 @@ export const Grid = styled.div`
     display: grid;
     grid-template-columns: 5rem 1fr 5rem;
     grid-template-areas:
-        ". header ."
+        "header header header"
         "banner banner banner"
         ". main ."
         "footer footer footer";

@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const ProductCardContainer = styled.a`
+export const ProductCardContainer = styled(Link)`
 
 `; 
 

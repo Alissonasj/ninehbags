@@ -3,19 +3,19 @@ import { useEffect, useState } from "react";
 const useFetch = (url: string) => {
     const [dataFecth, setDataFecth] = useState([]);
 
+    const handleFecth = async () => {
+        const response = await fetch(url);
+
+        const data = await response.json();
+
+        setDataFecth(data);
+    };
+
     useEffect(() => {
-        (async () => {
-            const response = await fetch(url);
-            console.log(response.ok);
-
-            const data = await response.json();
-            console.log(data);
-
-            setDataFecth(data);
-        })();
+        handleFecth();
     }, [url]);
 
-    return { dataFecth };
+    return dataFecth;
 };
 
 export default useFetch;
