@@ -36,6 +36,7 @@ const ProductPage = () => {
                                     </S.GridGalleryList>
                                 </S.Gallery>
 
+                                //Refatorar product info
                                 <S.ProductInfoWrapper>
                                     <ProductInfo.Container>
                                         <h1>{product.id}</h1>
@@ -43,34 +44,55 @@ const ProductPage = () => {
                                         <ProductInfo.Price
                                             price={product.price}
                                         />
+                                        <h5>Características: </h5>
+                                        <ul>
+                                            <ProductInfo.Chacteristics
+                                                chacteristics="Dimensões: 23 x 14 x 5,5
+                                                    cm."
+                                            />
+                                            <ProductInfo.Chacteristics
+                                                chacteristics="Ferragens: Banho duplo
+                                                        em níquel e banho único
+                                                        em verniz italiano."
+                                            />
+                                            <ProductInfo.Chacteristics
+                                                chacteristics="Material tecnológico:
+                                                        Laminado sintético
+                                                        vinílico. Composição
+                                                        revestida em PVC sobre
+                                                        trama em algodão."
+                                            />
+                                        </ul>
+                                        {/* <S.TechnicalInfoSection>
+                                            <div>
+                                                <S.TechnicalInfoTitle>
+                                                    Informações técnicas
+                                                </S.TechnicalInfoTitle>
+                                                <S.TechnicalInfoList>
+                                                    <S.TechnicalInfoItem>
+                                                        Dimensões: 23 x 14 x 5,5
+                                                        cm.
+                                                    </S.TechnicalInfoItem>
+
+                                                    <S.TechnicalInfoItem>
+                                                        Ferragens: Banho duplo
+                                                        em níquel e banho único
+                                                        em verniz italiano.
+                                                    </S.TechnicalInfoItem>
+
+                                                    <S.TechnicalInfoItem>
+                                                        Material tecnológico:
+                                                        Laminado sintético
+                                                        vinílico. Composição
+                                                        revestida em PVC sobre
+                                                        trama em algodão.
+                                                    </S.TechnicalInfoItem>
+                                                </S.TechnicalInfoList>
+                                            </div>
+                                        </S.TechnicalInfoSection> */}
                                     </ProductInfo.Container>
                                 </S.ProductInfoWrapper>
                             </S.ProductSection>
-
-                            <S.TechnicalInfoSection>
-                                <div>
-                                    <S.TechnicalInfoTitle>
-                                        Informações técnicas
-                                    </S.TechnicalInfoTitle>
-                                    <S.TechnicalInfoList>
-                                        <S.TechnicalInfoItem>
-                                            Dimensões: 23 x 14 x 5,5 cm.
-                                        </S.TechnicalInfoItem>
-
-                                        <S.TechnicalInfoItem>
-                                            Ferragens: Banho duplo em níquel e
-                                            banho único em verniz italiano.
-                                        </S.TechnicalInfoItem>
-
-                                        <S.TechnicalInfoItem>
-                                            Material tecnológico: Laminado
-                                            sintético vinílico. Composição
-                                            revestida em PVC sobre trama em
-                                            algodão.
-                                        </S.TechnicalInfoItem>
-                                    </S.TechnicalInfoList>
-                                </div>
-                            </S.TechnicalInfoSection>
 
                             <S.HistorySection>
                                 <div className="div-1">

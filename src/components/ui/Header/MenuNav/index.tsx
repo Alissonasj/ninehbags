@@ -14,11 +14,11 @@ const MenuNav = () => {
                 </Link.Nav>
 
                 <Link.Nav>
-                    <S.MenuItem children="Menu" />
+                    <S.MenuItem children="Contato" />
                 </Link.Nav>
 
                 <Link.Nav>
-                    <S.MenuItem children="Menu" />
+                    <S.MenuItem children="A_Nineh" />
                 </Link.Nav>
             </S.MenuList>
         </S.MenuNav>

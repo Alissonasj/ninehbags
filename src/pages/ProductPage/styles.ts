@@ -27,7 +27,7 @@ export const GalleryItem = styled.li`
 export const GalleryImg = styled.img``;
 
 export const ProductInfoWrapper = styled.div`
-    padding: 20px; //
+    padding: 20px;
 `;
 
 export const TechnicalInfoSection = styled.section`

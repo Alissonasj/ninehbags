@@ -1,4 +1,3 @@
-import { device } from "@styles/breakPoints";
 import styled from "styled-components";
 
 export const Header = styled.header`
@@ -6,20 +5,13 @@ export const Header = styled.header`
 `;
 
 export const Container = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "left center right";
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 
     background-color: ${({ theme }) => theme.colors.gray.g50};
     margin-top: ${({ theme }) => theme.spacing.gapx};
     margin-bottom: ${({ theme }) => theme.spacing.gapx};
-
-    & > nav {
-        @media ${device.md} {
-            grid-area: right;
-        }
-    }
 
     padding-inline: 5rem;
 
