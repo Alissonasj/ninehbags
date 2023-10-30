@@ -1,14 +1,21 @@
-import bannerDesktop from "@assets/imgs/banner_desk.jpg";
+import bannerDesktop from '@assets/imgs/banner_desk.jpg';
 
-import { Link } from "@components/Link";
-import * as S from "./styles";
+import CustomLink from '@components/Link/CustomLink';
 
 const Banner = () => {
     return (
-        <S.Banner>
-            <S.BannerImg src={bannerDesktop} />
-            <Link.Button children="Novidade" />
-        </S.Banner>
+        <div className="h-[43.75rem] 2md:h-[37.5rem] 2sm:h-[31.25rem] relative">
+            <img
+                src={bannerDesktop}
+                className="object-cover object-center w-full h-full"
+            />
+
+            <CustomLink
+                variant="button"
+                children="Novidade"
+                className="absolute translate-x-[-50%] translate-y-[-50%] left-[50%] bottom-[5%]"
+            />
+        </div>
     );
 };
 

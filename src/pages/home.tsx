@@ -1,11 +1,14 @@
-import Banner from "@ui/Banner";
-import ProductSection from "@ui/ProductSection";
+import Template from '@styles/Template';
+import Banner from '@ui/Banner';
+import ProductSection from '@ui/ProductSection';
 
 const Home = () => {
     return (
         <>
             <Banner />
-            <ProductSection />
+            <Template>
+                <ProductSection />
+            </Template>
         </>
     );
 };

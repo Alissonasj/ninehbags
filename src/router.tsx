@@ -1,12 +1,12 @@
-import ProductPage from "@pages/ProductPage";
-import Home from "@pages/home";
-import App from "App";
+import ProductPage from '@pages/ProductPage';
+import Home from '@pages/home';
+import App from 'App';
 
 import {
     Route,
     createBrowserRouter,
     createRoutesFromChildren,
-} from "react-router-dom";
+} from 'react-router-dom';
 
 const router = createBrowserRouter(
     createRoutesFromChildren(

@@ -1,15 +1,17 @@
-import logo from "@assets/imgs/black_logo.svg";
-import MenuNav from "./MenuNav";
-import * as S from "./styles";
+import logo from '@assets/imgs/black_logo.svg';
+import MenuNav from './MenuNav';
 
 const Header = () => {
     return (
-        <S.Header>
-            <S.Container>
-                <S.Logo src={logo} />
+        <header className="px-10 py-5 md:px-5">
+            <div className="flex items-center justify-between">
+                <img
+                    className="w-auto"
+                    src={logo}
+                />
                 <MenuNav />
-            </S.Container>
-        </S.Header>
+            </div>
+        </header>
     );
 };
 

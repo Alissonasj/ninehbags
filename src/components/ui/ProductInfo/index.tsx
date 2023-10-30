@@ -1,14 +1,13 @@
-import ProductInfoCharacteristics from "./ProductInfoCharacteristics";
-import ProductInfoPrice from "./ProductInfoPrice";
-import ProductInfoName from "./ProductInfoName";
-import ProductInfoContainer from "./ProductInfoContainer";
-
+import ProductInfoCharacteristicsList from './ProductInfoCharacteristicsList';
+import ProductInfoName from './ProductInfoName';
+import ProductInfoPrice from './ProductInfoPrice';
+import ProductInfoWrapper from './ProductInfoWrapper';
 
 const ProductInfo = {
-    Container: ProductInfoContainer,
+    Wrapper: ProductInfoWrapper,
     Name: ProductInfoName,
     Price: ProductInfoPrice,
-    Chacteristics: ProductInfoCharacteristics,    
+    Chacteristics: ProductInfoCharacteristicsList,
 };
 
 export default ProductInfo;

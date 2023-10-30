@@ -1,32 +1,34 @@
-import useFetch from "@hooks/useFetch";
-import Product from "@myTypes/product";
-import ProductCard from "@ui/ProductCard";
-import ProductMenuNav from "./ProductMenuNav";
-import * as S from "./styles";
+import useFetch from '@hooks/useFetch';
+import Product from '@myTypes/product';
+import ProductCard from '@ui/ProductCard';
+import ProductMenuNav from './ProductMenuNav';
 
 const ProductSection = () => {
-    const products = useFetch("http://localhost:3000/products") as Product[];
+    const products = useFetch('http://localhost:3000/products') as Product[];
 
     return (
-        <S.ProductSection>
+        <main className="my-28">
             <ProductMenuNav />
-            <S.GridProductSection>
+
+            <div className="grid grid-cols-4 gap-x-5 gap-y-10 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
                 {products?.map((product) => {
                     return (
-                        <ProductCard.Container
+                        <ProductCard.Wrapper
                             key={product.id}
-                            pathLink={`product/${product.id}`}
+                            href={`product/${product.id}`}
                         >
-                            <ProductCard.Img img={product.img} />
-                            <ProductCard.Information
-                                name={product.name}
-                                price={product.price}
-                            />
-                        </ProductCard.Container>
+                            <ProductCard.Img src={product.img} />
+
+                            <ProductCard.Name>{product.name}</ProductCard.Name>
+
+                            <ProductCard.Price>
+                                {product.price}
+                            </ProductCard.Price>
+                        </ProductCard.Wrapper>
                     );
                 })}
-            </S.GridProductSection>
-        </S.ProductSection>
+            </div>
+        </main>
     );
 };
 

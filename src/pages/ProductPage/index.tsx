@@ -1,101 +1,77 @@
-import imgg from "@assets/imgs/product.jpg";
-import useFetch from "@hooks/useFetch";
-import Product from "@myTypes/product";
-import ProductInfo from "@ui/ProductInfo";
-import { useParams } from "react-router-dom";
-import * as S from "./styles";
+import productImg from '@assets/imgs/product.jpg';
+import useFetch from '@hooks/useFetch';
+import Product from '@myTypes/product';
+import Template from '@styles/Template';
+import ProductInfo from '@ui/ProductInfo';
+import { useParams } from 'react-router-dom';
 
 const ProductPage = () => {
     const { productId } = useParams();
-    const products = useFetch("http://localhost:3000/products") as Product[];
+    const products = useFetch('http://localhost:3000/products') as Product[];
 
     return (
         <>
             {products.map((product) => {
                 return (
                     product.id === productId && (
-                        <S.Wrapper key={product.id}>
-                            <S.ProductSection>
-                                <S.Gallery>
-                                    <S.GridGalleryList>
-                                        <S.GalleryItem>
-                                            <S.GalleryImg src={product.img} />
-                                        </S.GalleryItem>
+                        <Template key={product.id}>
+                            <section className="grid grid-cols-2 gap-10">
+                                <div>
+                                    <ul className="grid grid-cols-2 gap-5 justify-items-center">
+                                        <li className="max-w-[31.25rem]">
+                                            <img src={product.img} />
+                                        </li>
 
-                                        <S.GalleryItem>
-                                            <S.GalleryImg src={product.img} />
-                                        </S.GalleryItem>
+                                        <li className="max-w-[31.25rem]">
+                                            <img src={product.img} />
+                                        </li>
 
-                                        <S.GalleryItem>
-                                            <S.GalleryImg src={product.img} />
-                                        </S.GalleryItem>
+                                        <li className="max-w-[31.25rem]">
+                                            <img src={product.img} />
+                                        </li>
 
-                                        <S.GalleryItem>
-                                            <S.GalleryImg src={product.img} />
-                                        </S.GalleryItem>
-                                    </S.GridGalleryList>
-                                </S.Gallery>
+                                        <li className="max-w-[31.25rem]">
+                                            <img src={product.img} />
+                                        </li>
+                                    </ul>
+                                </div>
 
-                                //Refatorar product info
-                                <S.ProductInfoWrapper>
-                                    <ProductInfo.Container>
+                                <div className="p-5">
+                                    <ProductInfo.Wrapper>
                                         <h1>{product.id}</h1>
-                                        <ProductInfo.Name name={product.name} />
-                                        <ProductInfo.Price
-                                            price={product.price}
-                                        />
-                                        <h5>Características: </h5>
-                                        <ul>
-                                            <ProductInfo.Chacteristics
-                                                chacteristics="Dimensões: 23 x 14 x 5,5
-                                                    cm."
-                                            />
-                                            <ProductInfo.Chacteristics
-                                                chacteristics="Ferragens: Banho duplo
-                                                        em níquel e banho único
-                                                        em verniz italiano."
-                                            />
-                                            <ProductInfo.Chacteristics
-                                                chacteristics="Material tecnológico:
-                                                        Laminado sintético
-                                                        vinílico. Composição
-                                                        revestida em PVC sobre
-                                                        trama em algodão."
-                                            />
-                                        </ul>
-                                        {/* <S.TechnicalInfoSection>
-                                            <div>
-                                                <S.TechnicalInfoTitle>
-                                                    Informações técnicas
-                                                </S.TechnicalInfoTitle>
-                                                <S.TechnicalInfoList>
-                                                    <S.TechnicalInfoItem>
-                                                        Dimensões: 23 x 14 x 5,5
-                                                        cm.
-                                                    </S.TechnicalInfoItem>
+                                        <ProductInfo.Name>
+                                            {product.name}
+                                        </ProductInfo.Name>
 
-                                                    <S.TechnicalInfoItem>
-                                                        Ferragens: Banho duplo
-                                                        em níquel e banho único
-                                                        em verniz italiano.
-                                                    </S.TechnicalInfoItem>
+                                        <ProductInfo.Price>
+                                            {product.price}
+                                        </ProductInfo.Price>
 
-                                                    <S.TechnicalInfoItem>
-                                                        Material tecnológico:
-                                                        Laminado sintético
-                                                        vinílico. Composição
-                                                        revestida em PVC sobre
-                                                        trama em algodão.
-                                                    </S.TechnicalInfoItem>
-                                                </S.TechnicalInfoList>
-                                            </div>
-                                        </S.TechnicalInfoSection> */}
-                                    </ProductInfo.Container>
-                                </S.ProductInfoWrapper>
-                            </S.ProductSection>
+                                        <h5 className="mb-4 uppercase text-base">
+                                            Características:{' '}
+                                        </h5>
+                                        <ProductInfo.Chacteristics>
+                                            <li className="list-disc ml-4">
+                                                Dimensões: 23 x 14 x 5,5 cm.
+                                            </li>
+                                            <li className="list-disc ml-4">
+                                                Ferragens: Banho duplo em níquel
+                                                e banho único em verniz
+                                                italiano.
+                                            </li>
+                                            <li className="list-disc ml-4">
+                                                Material tecnológico: Laminado
+                                                sintético vinílico. Composição
+                                                revestida em PVC sobre trama em
+                                                algodão.
+                                            </li>
+                                        </ProductInfo.Chacteristics>
+                                    </ProductInfo.Wrapper>
+                                </div>
+                            </section>
 
-                            <S.HistorySection>
-                                <div className="div-1">
+                            <section className="mt-10">
+                                <div className="flex items-center gap-5">
                                     <div>
                                         <h4>Um Clássico Must Have</h4>
                                         <p>
@@ -108,11 +84,11 @@ const ProductPage = () => {
                                         </p>
                                     </div>
                                     <div>
-                                        <img src={imgg} />
+                                        <img src={productImg} />
                                     </div>
                                 </div>
-                            </S.HistorySection>
-                        </S.Wrapper>
+                            </section>
+                        </Template>
                     )
                 );
             })}

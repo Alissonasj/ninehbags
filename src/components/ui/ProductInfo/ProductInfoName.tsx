@@ -1,8 +1,9 @@
-import ProductInfoProps from "./ProductInfoProps";
-import * as S from "./styles";
+interface ProductInfoNameProps {
+    children?: React.ReactNode;
+}
 
-const ProductInfoName = ({ name }: Pick<ProductInfoProps, "name">) => {
-    return <S.ProductInfoName>{name}</S.ProductInfoName>;
+const ProductInfoName = ({ children }: ProductInfoNameProps) => {
+    return <h3>{children}</h3>;
 };
 
 export default ProductInfoName;

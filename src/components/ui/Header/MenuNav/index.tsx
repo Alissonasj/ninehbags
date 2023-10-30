@@ -1,27 +1,29 @@
-import { Link } from "@components/Link";
-import * as S from "./styles";
+import CustomLink from '@components/Link/CustomLink';
 
 const MenuNav = () => {
     return (
-        <S.MenuNav>
-            <S.MenuList>
-                <Link.Nav pathLink="/">
-                    <S.MenuItem children="Home" />
-                </Link.Nav>
+        <nav className="md:hidden">
+            <ul className="flex justify-center gap-5">
+                <CustomLink
+                    variant="nav"
+                    href="/"
+                >
+                    <li className="px-[0.625rem] py-[0.3125rem]">Home</li>
+                </CustomLink>
 
-                <Link.Nav>
-                    <S.MenuItem children="Menu" />
-                </Link.Nav>
+                <CustomLink variant="nav">
+                    <li className="px-[0.625rem] py-[0.3125rem]">Menu</li>
+                </CustomLink>
 
-                <Link.Nav>
-                    <S.MenuItem children="Contato" />
-                </Link.Nav>
+                <CustomLink variant="nav">
+                    <li className="px-[0.625rem] py-[0.3125rem]">Contato</li>
+                </CustomLink>
 
-                <Link.Nav>
-                    <S.MenuItem children="A_Nineh" />
-                </Link.Nav>
-            </S.MenuList>
-        </S.MenuNav>
+                <CustomLink variant="nav">
+                    <li className="px-[0.625rem] py-[0.3125rem]">A_Nineh</li>
+                </CustomLink>
+            </ul>
+        </nav>
     );
 };
 

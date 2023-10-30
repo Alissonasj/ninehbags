@@ -1,11 +1,13 @@
-import ProductCardContainer from "./ProductCardContainer";
-import ProductCardImg from "./ProductCardImg";
-import ProductCardIformation from "./ProductCardInformation";
+import ProductCardImg from './ProductCardImg';
+import ProductCardName from './ProductCardName';
+import ProductCardPrice from './ProductCardPrice';
+import ProductCardWrapper from './ProductCardWrapper';
 
 const ProductCard = {
-    Container: ProductCardContainer,
+    Wrapper: ProductCardWrapper,
     Img: ProductCardImg,
-    Information: ProductCardIformation,
+    Name: ProductCardName,
+    Price: ProductCardPrice,
 };
 
 export default ProductCard;

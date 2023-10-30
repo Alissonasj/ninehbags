@@ -3,7 +3,7 @@ import instagram from "@assets/imgs/instagram.svg";
 import whatsapp from "@assets/imgs/whatsapp.svg";
 import logo from "@assets/imgs/white_logo.svg";
 import { Link } from "@components/Link";
-import { Logo as SLogo } from "@ui/Header/styles";
+
 import FooterNav from "./FooterNav";
 import * as S from "./styles";
 
@@ -12,7 +12,7 @@ const Footer = () => {
         <S.Footer>
             <S.Container>
                 <S.Header>
-                    <SLogo src={logo} />
+                    <img src={logo} />
                 </S.Header>
                 <S.Body>
                     <FooterNav title="Nossa Missão">

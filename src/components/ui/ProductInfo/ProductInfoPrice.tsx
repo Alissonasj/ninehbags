@@ -1,8 +1,9 @@
-import ProductInfoProps from "./ProductInfoProps";
-import * as S from "./styles";
+interface ProductInfoPriceProps {
+    children?: React.ReactNode;
+}
 
-const ProductInfoPrice = ({ price }: Pick<ProductInfoProps, "price">) => {
-    return <S.ProductInfoPrice>{price}</S.ProductInfoPrice>;
+const ProductInfoPrice = ({ children }: ProductInfoPriceProps) => {
+    return <span>{children}</span>;
 };
 
 export default ProductInfoPrice;
