@@ -74,7 +74,7 @@ const ProductPage = () => {
                                 </section>
 
                                 <section className='mt-10'>
-                                    <div className='flex items-center gap-5'>
+                                    <div className='flex items-center gap-5 custom-sm:flex-col-reverse'>
                                         <div className='space-y-5 text-gray-dark-800'>
                                             <h4 className='font-bold uppercase '>
                                                 Um Clássico Must Have

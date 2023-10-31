@@ -3,42 +3,41 @@ export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 
     theme: {
-        container: {
-            center: true,
-
-            padding: {
-                DEFAULT: '1rem',
-                sm: '2rem',
-                lg: '4rem',
-                xl: '5rem',
-                '2xl': '6rem',
-            },
-        },
 
         screens: {
-            '2xl': { max: '1535px' },
+            '2x-lg': { max: '1535px' },
             // => @media (max-width: 1535px)
+            // 2x-large
 
-            xl: { max: '1279px' },
+            'x-lg': { max: '1279px' },
             // => @media (max-width: 1279px)
+            // x-large
 
-            lg: { max: '1023px' },
+            'lg': { max: '1023px' },
             // => @media (max-width: 1023px)
+            // large
 
-            '2md': { max: '899px' },
+            'x-md': { max: '899px' },
             // => @media (max-width: 899px)
+            // x-medium
 
-            md: { max: '767px' },
+            'md': { max: '767px' },
             // => @media (max-width: 767px)
+            // medium
 
-            '2sm': { max: '639px' },
+            'x-sm': { max: '639px' },
             // => @media (max-width: 639px)
+            // x-small
 
-            sm: { max: '599px' },
+            'sm': { max: '599px' },
             // => @media (max-width: 599px)
+            // s-small
 
-            xs: { max: '399px' },
+            's-sm': { max: '399px' },
             // => @media (max-width: 399px)
+            // 2s-small
+
+            'custom-sm': { max: '512px'}
         },
 
         frontFamily: {

@@ -3,7 +3,7 @@ import CustomLink from '@components/Link/CustomLink';
 const MenuNav = () => {
     return (
         <nav className='md:hidden'>
-            <ul className='flex justify-center gap-5'>
+            <menu className='flex justify-center gap-5'>
                 <CustomLink
                     variant='nav'
                     href='/'
@@ -22,7 +22,7 @@ const MenuNav = () => {
                 <CustomLink variant='nav'>
                     <li className='px-[0.625rem] py-[0.3125rem]'>A_Nineh</li>
                 </CustomLink>
-            </ul>
+            </menu>
         </nav>
     );
 };

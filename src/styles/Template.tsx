@@ -3,7 +3,7 @@ interface TemplateProps {
 }
 
 const Template = ({ children }: TemplateProps) => {
-    return <div className="container">{children}</div>;
+    return <div className="mx-20 md:mx-5">{children}</div>;
 };
 
 export default Template;

@@ -75,7 +75,7 @@ const Footer = () => {
                             </h4>
                         </li>
 
-                        <li className='flex flex-row gap-3'>
+                        <div className='flex flex-row gap-3'>
                             <CustomLink>
                                 <li>
                                     <img
@@ -102,7 +102,7 @@ const Footer = () => {
                                     />
                                 </li>
                             </CustomLink>
-                        </li>
+                        </div>
                     </ul>
                 </div>
             </div>
