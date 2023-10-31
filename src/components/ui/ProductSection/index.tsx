@@ -7,10 +7,10 @@ const ProductSection = () => {
     const products = useFetch('http://localhost:3000/products') as Product[];
 
     return (
-        <main className="my-28">
+        <main className='my-28'>
             <ProductMenuNav />
 
-            <div className="grid grid-cols-4 gap-x-5 gap-y-10 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1">
+            <div className='grid grid-cols-4 gap-x-5 gap-y-10 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1'>
                 {products?.map((product) => {
                     return (
                         <ProductCard.Wrapper

@@ -3,10 +3,10 @@ import MenuNav from './MenuNav';
 
 const Header = () => {
     return (
-        <header className="px-10 py-5 md:px-5">
-            <div className="flex items-center justify-between">
+        <header className='px-10 py-5 md:px-5 border-b-[1px]'>
+            <div className='flex items-center justify-between'>
                 <img
-                    className="w-auto"
+                    className='w-auto'
                     src={logo}
                 />
                 <MenuNav />

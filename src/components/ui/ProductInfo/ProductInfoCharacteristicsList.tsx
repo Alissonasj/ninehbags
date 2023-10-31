@@ -5,7 +5,7 @@ interface ProductInfoCharacteristicsListProps {
 const ProductInfoCharacteristicsList = ({
     children,
 }: ProductInfoCharacteristicsListProps) => {
-    return <ul className="flex flex-col gap-2 text-sm">{children}</ul>;
+    return <ul className='flex flex-col gap-2 text-sm'>{children}</ul>;
 };
 
 export default ProductInfoCharacteristicsList;

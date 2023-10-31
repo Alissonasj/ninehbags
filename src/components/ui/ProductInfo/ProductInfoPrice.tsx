@@ -3,7 +3,7 @@ interface ProductInfoPriceProps {
 }
 
 const ProductInfoPrice = ({ children }: ProductInfoPriceProps) => {
-    return <span>{children}</span>;
+    return <span className='text-3xl text-gray-dark-800'>{children}</span>;
 };
 
 export default ProductInfoPrice;

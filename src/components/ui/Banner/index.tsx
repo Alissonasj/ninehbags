@@ -4,16 +4,16 @@ import CustomLink from '@components/Link/CustomLink';
 
 const Banner = () => {
     return (
-        <div className="h-[43.75rem] 2md:h-[37.5rem] 2sm:h-[31.25rem] relative">
+        <div className='relative h-[43.75rem] 2md:h-[37.5rem] 2sm:h-[31.25rem]'>
             <img
                 src={bannerDesktop}
-                className="object-cover object-center w-full h-full"
+                className='h-full w-full object-cover object-center'
             />
 
             <CustomLink
-                variant="button"
-                children="Novidade"
-                className="absolute translate-x-[-50%] translate-y-[-50%] left-[50%] bottom-[5%]"
+                variant='button'
+                children='Novidade'
+                className='absolute bottom-[5%] left-[50%] translate-x-[-50%] translate-y-[-50%]'
             />
         </div>
     );
