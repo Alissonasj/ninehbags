@@ -1,6 +1,5 @@
 import bannerDesktop from '@assets/imgs/banner_desk.jpg';
-
-import CustomLink from '@components/Link/CustomLink';
+import CustomLink from '@components/CustomLink';
 
 const Banner = () => {
     return (

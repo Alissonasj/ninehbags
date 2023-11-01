@@ -1,4 +1,4 @@
-import CustomLink from '@components/Link/CustomLink';
+import CustomLink from '@components/CustomLink';
 
 interface ProductCardWrapperProps {
     children?: React.ReactNode;

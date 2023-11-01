@@ -3,7 +3,6 @@ export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 
     theme: {
-
         screens: {
             '2x-lg': { max: '1535px' },
             // => @media (max-width: 1535px)
@@ -13,7 +12,7 @@ export default {
             // => @media (max-width: 1279px)
             // x-large
 
-            'lg': { max: '1023px' },
+            lg: { max: '1023px' },
             // => @media (max-width: 1023px)
             // large
 
@@ -21,7 +20,7 @@ export default {
             // => @media (max-width: 899px)
             // x-medium
 
-            'md': { max: '767px' },
+            md: { max: '767px' },
             // => @media (max-width: 767px)
             // medium
 
@@ -29,7 +28,7 @@ export default {
             // => @media (max-width: 639px)
             // x-small
 
-            'sm': { max: '599px' },
+            sm: { max: '599px' },
             // => @media (max-width: 599px)
             // s-small
 
@@ -37,7 +36,7 @@ export default {
             // => @media (max-width: 399px)
             // 2s-small
 
-            'custom-sm': { max: '512px'}
+            'custom-sm': { max: '512px' },
         },
 
         extend: {
@@ -59,5 +58,5 @@ export default {
             },
         },
     },
-    // plugins: [require('@tailwindcss/forms')]
+    plugins: [require('@tailwindcss/forms')],
 };

@@ -2,17 +2,14 @@ import facebook from '@assets/imgs/facebook.svg';
 import instagram from '@assets/imgs/instagram.svg';
 import whatsapp from '@assets/imgs/whatsapp.svg';
 import logo from '@assets/imgs/white_logo.svg';
-
-import CustomLink from '@components/Link/CustomLink';
+import CustomLink from '@components/CustomLink';
 
 const Footer = () => {
     return (
         <footer className='bg-gray-dark-900'>
             <div className='p-20 md:px-5'>
                 <div className='justify-center pb-20 sm:flex sm:justify-center'>
-                    <img
-                        src={logo}
-                    />
+                    <img src={logo} />
                 </div>
 
                 <div className='flex flex-wrap justify-between gap-5 text-gray-dark-75'>
@@ -79,7 +76,7 @@ const Footer = () => {
                                 <li>
                                     <img
                                         src={whatsapp}
-                                        className='w-5 h-5'
+                                        className='h-5 w-5'
                                     />
                                 </li>
                             </CustomLink>
@@ -88,7 +85,7 @@ const Footer = () => {
                                 <li>
                                     <img
                                         src={instagram}
-                                        className='w-5 h-5'
+                                        className='h-5 w-5'
                                     />
                                 </li>
                             </CustomLink>
@@ -97,7 +94,7 @@ const Footer = () => {
                                 <li>
                                     <img
                                         src={facebook}
-                                        className='w-5 h-5'
+                                        className='h-5 w-5'
                                     />
                                 </li>
                             </CustomLink>
