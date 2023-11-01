@@ -6,7 +6,6 @@ const Header = () => {
         <header className='px-20 py-5 md:px-5 border-b-[1px]'>
             <div className='flex items-center justify-between'>
                 <img
-                    className='w-auto'
                     src={logo}
                 />
                 

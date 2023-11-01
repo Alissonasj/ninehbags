@@ -34,43 +34,18 @@
     src: url('../../src/assets/fonts/Montserrat-Bold.woff2') format('woff2');
 }
 
-body {
-    font-family: 'Montserrat', 'sans-serif';
+@layer base {
+    html {
+        @apply font-[Montserrat];
+    }
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
+@layer components {
+    .link-nav {
+        @apply font-[400] text-[1.125rem] text-gray-dark-800;
+    }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-button {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style-type: none;
-}
-
-img {
-    display: block;
-    width: 100%;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
+    .link-button {
+        @apply font-[600] text-[1.125rem] uppercase text-gray-dark-75 px-10 py-5 bg-gray-dark-900 rounded;
+    }
 }

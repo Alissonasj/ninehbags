@@ -5,7 +5,7 @@ import Template from '@styles/Template';
 import ProductInfo from '@ui/ProductInfo';
 import { useParams } from 'react-router-dom';
 
-const ProductPage = () => {
+const ProductDetails = () => {
     const { productId } = useParams();
     const products = useFetch('http://localhost:3000/products') as Product[];
 
@@ -102,4 +102,4 @@ const ProductPage = () => {
     );
 };
 
-export default ProductPage;
+export default ProductDetails;

@@ -15,8 +15,8 @@ const CustomLink = ({
 }: CustomLinkProps) => {
     const variantion = {
         default: '',
-        nav: 'font-[400] text-[1.125rem] text-gray-dark-800',
-        button: 'font-[600] text-[1.125rem] uppercase text-gray-dark-75 px-10 py-5 bg-gray-dark-900 rounded',
+        nav: 'link-nav',
+        button: 'link-button',
     };
 
     return (

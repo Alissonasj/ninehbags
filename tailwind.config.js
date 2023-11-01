@@ -40,10 +40,6 @@ export default {
             'custom-sm': { max: '512px'}
         },
 
-        frontFamily: {
-            sans: ['Montserrat', 'sans-serif'],
-        },
-
         extend: {
             colors: {
                 primary: '#CF8C95',
@@ -63,4 +59,5 @@ export default {
             },
         },
     },
+    // plugins: [require('@tailwindcss/forms')]
 };

@@ -5,8 +5,8 @@ const MenuNav = () => {
         <nav className='md:hidden'>
             <menu className='flex justify-center gap-5'>
                 <CustomLink
-                    variant='nav'
                     href='/'
+                    variant='nav'
                 >
                     <li className='px-[0.625rem] py-[0.3125rem]'>Home</li>
                 </CustomLink>
@@ -15,7 +15,10 @@ const MenuNav = () => {
                     <li className='px-[0.625rem] py-[0.3125rem]'>Menu</li>
                 </CustomLink>
 
-                <CustomLink variant='nav'>
+                <CustomLink
+                    href='/contact'
+                    variant='nav'
+                >
                     <li className='px-[0.625rem] py-[0.3125rem]'>Contato</li>
                 </CustomLink>
 

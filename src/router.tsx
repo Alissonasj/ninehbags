@@ -1,5 +1,7 @@
-import ProductPage from '@pages/ProductPage';
+
+import Contact from '@pages/contact';
 import Home from '@pages/home';
+import ProductDetails from '@pages/productDetails';
 import App from 'App';
 
 import {
@@ -22,7 +24,12 @@ const router = createBrowserRouter(
             />
             <Route
                 path="product/:productId"
-                element={<ProductPage />}
+                element={<ProductDetails />}
+                // loader={getProducts}
+            />
+            <Route
+                path="/contact"
+                element={<Contact />}
                 // loader={getProducts}
             />
         </Route>

@@ -12,7 +12,6 @@ const Footer = () => {
                 <div className='justify-center pb-20 sm:flex sm:justify-center'>
                     <img
                         src={logo}
-                        className='w-auto'
                     />
                 </div>
 
@@ -80,7 +79,7 @@ const Footer = () => {
                                 <li>
                                     <img
                                         src={whatsapp}
-                                        style={{ width: 20, height: 20 }}
+                                        className='w-5 h-5'
                                     />
                                 </li>
                             </CustomLink>
@@ -89,7 +88,7 @@ const Footer = () => {
                                 <li>
                                     <img
                                         src={instagram}
-                                        style={{ width: 20, height: 20 }}
+                                        className='w-5 h-5'
                                     />
                                 </li>
                             </CustomLink>
@@ -98,7 +97,7 @@ const Footer = () => {
                                 <li>
                                     <img
                                         src={facebook}
-                                        style={{ width: 20, height: 20 }}
+                                        className='w-5 h-5'
                                     />
                                 </li>
                             </CustomLink>
