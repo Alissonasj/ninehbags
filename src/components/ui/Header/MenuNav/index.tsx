@@ -1,8 +1,13 @@
 import CustomLink from '@components/CustomLink';
+import { twMerge } from 'tailwind-merge';
 
-const MenuNav = () => {
+interface MenuNavProps {
+    className?: string;
+}
+
+const MenuNav = ({ className }: MenuNavProps) => {
     return (
-        <nav className='md:hidden'>
+        <nav className={twMerge('', className)}>
             <menu className='flex justify-center gap-5'>
                 <CustomLink
                     href='/'

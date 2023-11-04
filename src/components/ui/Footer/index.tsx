@@ -1,12 +1,21 @@
 import facebook from '@assets/imgs/facebook.svg';
 import instagram from '@assets/imgs/instagram.svg';
+import whatsappFixed from '@assets/imgs/whatsapp-fixed.svg';
 import whatsapp from '@assets/imgs/whatsapp.svg';
 import logo from '@assets/imgs/white_logo.svg';
 import CustomLink from '@components/CustomLink';
 
 const Footer = () => {
     return (
-        <footer className='bg-gray-dark-900'>
+        <footer className='relative bg-gray-dark-900'>
+            <div className='fixed bottom-0 right-0 m-3'>
+                <a href='#'>
+                    <img
+                        src={whatsappFixed}
+                        className='h-14 w-14'
+                    />
+                </a>
+            </div>
             <div className='p-20 md:px-5'>
                 <div className='justify-center pb-20 sm:flex sm:justify-center'>
                     <img src={logo} />

@@ -20,19 +20,31 @@ const ProductDetails = () => {
                                     <div>
                                         <ul className='grid grid-cols-2 justify-items-center gap-5'>
                                             <li className='max-w-[31.25rem]'>
-                                                <img src={product.img} />
+                                                <img
+                                                    src={product.img}
+                                                    className='rounded-bl-[1.25rem] rounded-tr-[1.25rem]'
+                                                />
                                             </li>
 
                                             <li className='max-w-[31.25rem]'>
-                                                <img src={product.img} />
+                                                <img
+                                                    src={product.img}
+                                                    className='rounded-bl-[1.25rem] rounded-tr-[1.25rem]'
+                                                />
                                             </li>
 
                                             <li className='max-w-[31.25rem]'>
-                                                <img src={product.img} />
+                                                <img
+                                                    src={product.img}
+                                                    className='rounded-bl-[1.25rem] rounded-tr-[1.25rem]'
+                                                />
                                             </li>
 
                                             <li className='max-w-[31.25rem]'>
-                                                <img src={product.img} />
+                                                <img
+                                                    src={product.img}
+                                                    className='rounded-bl-[1.25rem] rounded-tr-[1.25rem]'
+                                                />
                                             </li>
                                         </ul>
                                     </div>

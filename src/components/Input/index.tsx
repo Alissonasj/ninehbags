@@ -1,10 +1,16 @@
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-const Input = ({}: InputProps) => {
+const Input = ({ children, id, placeholder }: InputProps) => {
     return (
-        <>
-            <input type='text' />
-        </>
+        <div className='mb-5 flex flex-col gap-2'>
+            <label htmlFor={id}>{children}</label>
+            <input
+                type='text'
+                id={id}
+                placeholder={placeholder}
+                className='rounded-[5px]'
+            />
+        </div>
     );
 };
 
