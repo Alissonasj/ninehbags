@@ -1,6 +1,7 @@
 
 import Contact from '@pages/contact';
 import Home from '@pages/home';
+import NotFound from '@pages/notFound';
 import ProductDetails from '@pages/productDetails';
 import App from 'App';
 
@@ -15,7 +16,7 @@ const router = createBrowserRouter(
         <Route
             path="/"
             element={<App />}
-            errorElement={<h1>Ainda vou impletar a página de erro ^^'</h1>}
+            errorElement={<NotFound />}
         >
             <Route
                 path="/"

@@ -63,7 +63,7 @@ const ProductDetails = () => {
                                             <ProductInfo.Chacteristics>
                                                 <li>
                                                     <h5 className='mb-4 mt-16 text-base font-bold uppercase text-gray-dark-700'>
-                                                        Características:{' '}
+                                                        Características:
                                                     </h5>
                                                 </li>
                                                 <li className='ml-4 list-disc text-gray-dark-600'>
@@ -81,6 +81,36 @@ const ProductDetails = () => {
                                                     sobre trama em algodão.
                                                 </li>
                                             </ProductInfo.Chacteristics>
+                                            <div className='mt-10'>
+                                                <h5 className='mb-4 mt-16 text-base font-bold uppercase text-gray-dark-700'>
+                                                    Resumo:
+                                                </h5>
+                                                <p className='text-justify text-base text-gray-dark-600'>
+                                                    A Moon bag, também conhecida
+                                                    como Bolsa Lua, recebe esse
+                                                    nome devido ao seu design
+                                                    circular. Suas faces são
+                                                    adornadas com material
+                                                    texturizado, conferindo um
+                                                    toque especial à peça, além
+                                                    de ser bem estruturada
+                                                    mantendo seu formato
+                                                    intacto! Equipada com uma
+                                                    alça transversal ajustável,
+                                                    tirantes laterais com um
+                                                    design exclusivo em forma
+                                                    triangular e mosquetões em
+                                                    suas extremidades, tornando
+                                                    a remoção da alça uma tarefa
+                                                    simples. A Moon bag se
+                                                    apresenta como a opção
+                                                    espaçosa e ideal para
+                                                    transportar seus itens
+                                                    essenciais com estilo, ela
+                                                    te acompanhará em momentos
+                                                    incríveis.
+                                                </p>
+                                            </div>
                                         </ProductInfo.Wrapper>
                                     </div>
                                 </section>
