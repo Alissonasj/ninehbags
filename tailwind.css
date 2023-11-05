@@ -46,6 +46,10 @@
     }
 
     .link-button {
-        @apply font-[600] text-[1.125rem] uppercase text-gray-dark-75 px-10 py-5 bg-gray-dark-900 rounded;
+        @apply font-[600] text-[1.125rem] uppercase text-gray-dark-75 px-10 py-5 bg-gray-dark-900 rounded-full;
+    }
+
+    .my-transition {
+        @apply transition delay-100 ease-in-out;
     }
 }

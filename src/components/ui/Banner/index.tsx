@@ -12,7 +12,7 @@ const Banner = () => {
             <CustomLink
                 variant='button'
                 children='Novidade'
-                className='absolute bottom-[5%] left-[50%] translate-x-[-50%] translate-y-[-50%]'
+                className='absolute bottom-[5%] left-[50%] translate-x-[-50%] translate-y-[-50%] hover:bg-gray-dark-800'
             />
         </div>
     );
