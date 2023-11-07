@@ -50,6 +50,6 @@
     }
 
     .my-transition {
-        @apply transition delay-100 ease-in-out;
+        @apply transition delay-100 ease-in;
     }
 }
