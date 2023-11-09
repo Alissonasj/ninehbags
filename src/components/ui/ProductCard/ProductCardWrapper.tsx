@@ -13,7 +13,7 @@ const ProductCardWrapper = ({ children, href }: ProductCardWrapperProps) => {
         <CustomLink href={href}>
             <motion.div
                 whileHover={{ scale: 1.05 }}
-                className='rounded-[5px] p-3  hover:shadow-sm hover:shadow-gray-dark-500'
+                className='rounded-[5px] hover:shadow-sm hover:shadow-gray-dark-500'
             >
                 {children}
             </motion.div>

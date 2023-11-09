@@ -19,11 +19,15 @@ const ProductSection = () => {
                         >
                             <ProductCard.Img src={product.img} />
 
-                            <ProductCard.Name>{product.name}</ProductCard.Name>
+                            <div className='p-5'>
+                                <ProductCard.Name>
+                                    {product.name}
+                                </ProductCard.Name>
 
-                            <ProductCard.Price>
-                                {product.price}
-                            </ProductCard.Price>
+                                <ProductCard.Price>
+                                    {product.price}
+                                </ProductCard.Price>
+                            </div>
                         </ProductCard.Wrapper>
                     );
                 })}
