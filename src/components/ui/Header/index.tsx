@@ -17,18 +17,14 @@ const Header = () => {
                     style={{ width }}
                 />
 
-                <MenuNav
-                    className={`md:absolute md:flex md:h-[100vh] md:w-80 md:flex-col md:justify-start md:bg-gray-dark-50 md:p-5 
-                    ${hambugerIsOpen ? 'right-0' : '-right-80'}`}
-                    ////////////////////
-                />
-
-                <div className='hidden text-gray-dark-700 md:block'>
+                <div className='hidden text-gray-dark-700 md:block relative z-50'>
                     <Hamburger
                         toggle={setHambugerIsOpen}
                         toggled={hambugerIsOpen}
                     />
                 </div>
+
+                <MenuNav hambugerIsOpen={hambugerIsOpen} />
             </div>
         </header>
     );

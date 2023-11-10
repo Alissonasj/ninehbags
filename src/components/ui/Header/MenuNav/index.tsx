@@ -1,13 +1,18 @@
+import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
-import { twMerge } from 'tailwind-merge';
-import { motion } from 'framer-motion'
 
-interface MenuNavProps extends React.MenuHTMLAttributes<HTMLElement> {}
+interface MenuNavProps {
+    hambugerIsOpen?: boolean;
+}
 
-const MenuNav = ({ className }: MenuNavProps) => {
+const MenuNav = ({hambugerIsOpen} : MenuNavProps) => {
     return (
-        <nav>
-            <motion.menu className={twMerge('flex justify-center gap-5 [&_a.active]:border-primary', className)}>
+        <nav
+            className={`md:fixed md:-right-60 md:top-0 md:flex  md:h-[100vh]
+                    md:w-60 md:bg-gray-dark-50 md:p-5 md:z-40
+                    ${hambugerIsOpen ? '-translate-x-60' : 'translate-x-0'}`}
+        >
+            <motion.menu className='flex justify-center gap-5 md:flex-col md:justify-start [&_a.active]:border-primary'>
                 <NavLink
                     to='/'
                     className='link-nav my-transition border-b-2 border-transparent hover:border-b-2 hover:border-primary'
