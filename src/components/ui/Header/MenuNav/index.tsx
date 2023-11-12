@@ -5,11 +5,11 @@ interface MenuNavProps {
     hambugerIsOpen?: boolean;
 }
 
-const MenuNav = ({hambugerIsOpen} : MenuNavProps) => {
+const MenuNav = ({ hambugerIsOpen }: MenuNavProps) => {
     return (
         <nav
-            className={`md:fixed md:-right-60 md:top-0 md:flex  md:h-[100vh]
-                    md:w-60 md:bg-gray-dark-50 md:p-5 md:z-40
+            className={`my-transition md:fixed md:-right-60 md:top-0 md:z-40  md:flex
+                    md:h-[100vh] md:w-60 md:bg-gray-dark-50 md:p-5
                     ${hambugerIsOpen ? '-translate-x-60' : 'translate-x-0'}`}
         >
             <motion.menu className='flex justify-center gap-5 md:flex-col md:justify-start [&_a.active]:border-primary'>

@@ -11,13 +11,12 @@ const Header = () => {
 
     return (
         <header className='sticky top-0 z-50 border-b-[1px] bg-gray-dark-50 px-20 py-5 md:px-5'>
-            <div className='flex items-center justify-between'>
-                <motion.img
-                    src={logo}
-                    style={{ width }}
-                />
+            <div className='flex items-center justify-between md:items-start'>
+                <motion.div style={{ width }}>
+                    <img src={logo} />
+                </motion.div>
 
-                <div className='hidden text-gray-dark-700 md:block relative z-50'>
+                <div className='relative z-50 hidden text-gray-dark-700 md:block'>
                     <Hamburger
                         toggle={setHambugerIsOpen}
                         toggled={hambugerIsOpen}
