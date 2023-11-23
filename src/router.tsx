@@ -29,7 +29,7 @@ const router = createBrowserRouter(
                 // loader={getProducts}
             />
             <Route
-                path="/contact"
+                path="contact"
                 element={<Contact />}
                 // loader={getProducts}
             />

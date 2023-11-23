@@ -9,11 +9,9 @@ const Banner = () => {
                 className='h-full w-full object-cover object-center'
             />
 
-            <CustomLink
-                variant='button'
-                children='Novidade'
-                className='absolute bottom-[5%] left-[50%] translate-x-[-50%] translate-y-[-50%] hover:bg-gray-dark-800'
-            />
+            <CustomLink className='link-button absolute bottom-[5%] left-[50%] translate-x-[-50%] translate-y-[-50%] hover:bg-gray-dark-800'>
+                Novidade
+            </CustomLink>
         </div>
     );
 };

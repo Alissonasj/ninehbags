@@ -15,7 +15,6 @@ const ProductSection = () => {
             },
         },
     };
-
     const item = {
         hidden: { y: 20, opacity: 0 },
         visible: {
@@ -40,11 +39,9 @@ const ProductSection = () => {
                             whileHover={{ scale: 1.03 }}
                             variants={item}
                             className='rounded-[5px] hover:shadow-md'
+                            key={product.id}
                         >
-                            <ProductCard.Wrapper
-                                key={product.id}
-                                href={`product/${product.id}`}
-                            >
+                            <ProductCard.Wrapper href={`product/${product.id}`}>
                                 <ProductCard.Img src={product.img} />
 
                                 <div className='p-5'>
