@@ -1,4 +1,3 @@
-
 import Contact from '@pages/contact';
 import Home from '@pages/home';
 import NotFound from '@pages/notFound';
@@ -14,24 +13,21 @@ import {
 const router = createBrowserRouter(
     createRoutesFromChildren(
         <Route
-            path="/"
+            path='/'
             element={<App />}
             errorElement={<NotFound />}
         >
             <Route
-                path="/"
+                path='/'
                 element={<Home />}
-                // loader={getProducts} // recupera os dados da função com o hook useLoaderData na rota
             />
             <Route
-                path="product/:productId"
+                path='product/:productId'
                 element={<ProductDetails />}
-                // loader={getProducts}
             />
             <Route
-                path="contact"
+                path='contact'
                 element={<Contact />}
-                // loader={getProducts}
             />
         </Route>
     )

@@ -1,5 +1,5 @@
 import productImg from '@assets/imgs/product.jpg';
-import useFetch from '@hooks/useFetch';
+import useApi from '@hooks/useApi';
 import Product from '@myTypes/product';
 import Template from '@styles/Template';
 import ProductInfo from '@ui/ProductInfo';
@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
     const { productId } = useParams();
-    const products = useFetch('http://localhost:3000/products') as Product[];
+    const products = useApi('/products') as Product[];
 
     return (
         <>

@@ -1,11 +1,12 @@
-import useFetch from '@hooks/useFetch';
+import useApi from '@hooks/useApi';
 import Product from '@myTypes/product';
 import ProductCard from '@ui/ProductCard';
 import { motion } from 'framer-motion';
 import ProductMenuNav from './ProductMenuNav';
 
 const ProductSection = () => {
-    const products = useFetch('http://localhost:3000/products') as Product[];
+    const products = useApi('/products') as Product[];
+
     const container = {
         hidden: { opacity: 1 },
         visible: {
@@ -15,6 +16,7 @@ const ProductSection = () => {
             },
         },
     };
+    
     const item = {
         hidden: { y: 20, opacity: 0 },
         visible: {
