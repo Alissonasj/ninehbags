@@ -8,18 +8,26 @@ const instanceAxios = axios.create({
 const useApi = (url: string) => {
     const [dataApi, setDataApi] = useState([]);
 
-    const handleApi = async () => {
-        try {
-            const response = await instanceAxios.get(url);
-
-            setDataApi(response.data);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
     useEffect(() => {
+        const controller = new AbortController();
+
+        const handleApi = async () => {
+            try {
+                const response = await instanceAxios.get(url, {
+                    signal: controller.signal,
+                });
+
+                setDataApi(response.data);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
         handleApi();
+
+        return () => {
+            controller.abort();
+        };
     }, []);
 
     return dataApi;
