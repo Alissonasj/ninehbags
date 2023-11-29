@@ -1,6 +1,6 @@
 import Template from '@styles/Template';
-import Banner from '@ui/Banner';
-import ProductSection from '@ui/ProductSection';
+import Banner from '@components/Banner/Banner';
+import ProductSection from '@components/Product/Section/Section';
 
 const Home = () => {
     return (

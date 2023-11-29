@@ -1,8 +1,8 @@
 import useApi from '@hooks/useApi';
 import Product from '@myTypes/product';
-import ProductCard from '@ui/ProductCard';
+import ProductCard from '@components/Product/Card';
 import { motion } from 'framer-motion';
-import ProductMenuNav from './ProductMenuNav';
+import ProductMenuNav from './Filter/Filter';
 
 const ProductSection = () => {
     const products = useApi('/products') as Product[];

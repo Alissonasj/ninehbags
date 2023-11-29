@@ -2,7 +2,7 @@ import logo from '@assets/imgs/black_logo.svg';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
 import { useState } from 'react';
-import MenuNav from './MenuNav';
+import MenuNav from './MenuNav/MenuNav';
 
 const Header = () => {
     const { scrollYProgress } = useScroll();

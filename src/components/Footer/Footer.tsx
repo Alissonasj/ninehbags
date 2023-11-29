@@ -3,7 +3,7 @@ import instagram from '@assets/imgs/instagram.svg';
 import whatsappFixed from '@assets/imgs/whatsapp-fixed.svg';
 import whatsapp from '@assets/imgs/whatsapp.svg';
 import logo from '@assets/imgs/white_logo.svg';
-import CustomLink from '@components/CustomLink';
+import CustomLink from '@ui/CustomLink/CustomLink';
 
 const Footer = () => {
     return (

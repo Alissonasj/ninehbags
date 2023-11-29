@@ -1,7 +1,7 @@
-import Contact from '@pages/contact';
-import Home from '@pages/home';
-import NotFound from '@pages/notFound';
-import ProductDetails from '@pages/productDetails';
+import Contact from '@pages/Contact';
+import Home from '@pages/Home';
+import NotFound from '@pages/NotFound';
+import ProductDetails from '@pages/ProductDetails';
 import App from 'App';
 
 import {

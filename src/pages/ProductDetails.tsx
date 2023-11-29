@@ -2,7 +2,7 @@ import productImg from '@assets/imgs/product.jpg';
 import useApi from '@hooks/useApi';
 import Product from '@myTypes/product';
 import Template from '@styles/Template';
-import ProductInfo from '@ui/ProductInfo';
+import ProductInfo from '@components/Product/Info/';
 import { useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
