@@ -1,29 +1,30 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-const instanceAxios = axios.create({
-    baseURL: 'http://localhost:5000/',
-});
+interface ConfigAxios {
+    method: 'get' | 'post' | 'put' | 'delete';
+    url: string;
+}
 
-const useApi = (url: string) => {
+const useApi = (config: ConfigAxios) => {
     const [dataApi, setDataApi] = useState([]);
 
     useEffect(() => {
         const controller = new AbortController();
 
-        const handleApi = async () => {
+        (async () => {
             try {
-                const response = await instanceAxios.get(url, {
-                    signal: controller.signal,
+                const response = await axios({
+                    baseURL: 'http://localhost:5000/',
+                    signal: controller.signal,                    
+                    ...config,
                 });
 
                 setDataApi(response.data);
             } catch (error) {
                 console.log(error);
             }
-        };
-
-        handleApi();
+        })();
 
         return () => {
             controller.abort();

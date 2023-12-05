@@ -1,13 +1,13 @@
 import productImg from '@assets/imgs/product.jpg';
+import ProductInfo from '@components/Product/Info/';
 import useApi from '@hooks/useApi';
 import Product from '@myTypes/product';
 import Template from '@styles/Template';
-import ProductInfo from '@components/Product/Info/';
 import { useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
     const { productId } = useParams();
-    const products = useApi('/products') as Product[];
+    const products = useApi({ method: 'get', url: '/products' }) as Product[];
 
     return (
         <>

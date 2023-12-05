@@ -8,7 +8,6 @@ const CustomLink = ({
     className,
     href = '#',
     children,
-
     ...props
 }: CustomLinkProps) => {
     return (

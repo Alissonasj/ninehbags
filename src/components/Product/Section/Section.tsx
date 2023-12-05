@@ -1,11 +1,11 @@
+import ProductCard from '@components/Product/Card';
 import useApi from '@hooks/useApi';
 import Product from '@myTypes/product';
-import ProductCard from '@components/Product/Card';
 import { motion } from 'framer-motion';
 import ProductMenuNav from './Filter/Filter';
 
 const ProductSection = () => {
-    const products = useApi('/products') as Product[];
+    const products = useApi({ method: 'get', url: '/products' }) as Product[];
 
     const container = {
         hidden: { opacity: 1 },
@@ -16,7 +16,7 @@ const ProductSection = () => {
             },
         },
     };
-    
+
     const item = {
         hidden: { y: 20, opacity: 0 },
         visible: {
@@ -35,7 +35,7 @@ const ProductSection = () => {
                 animate='visible'
                 className='grid grid-cols-4 gap-x-5 gap-y-10 lg:grid-cols-3 sm:grid-cols-2 s-sm:grid-cols-1'
             >
-                {products?.map((product) => {
+                {products.map((product) => {
                     return (
                         <motion.div
                             whileHover={{ scale: 1.03 }}
