@@ -1,3 +1,4 @@
+import InfinityScroll from '@components/InfinityScroll/InfinityScroll';
 import ProductCard from '@components/Product/Card';
 import useApi from '@hooks/useApi';
 import Product from '@myTypes/product';
@@ -5,7 +6,11 @@ import { motion } from 'framer-motion';
 import ProductMenuNav from './Filter/Filter';
 
 const ProductSection = () => {
-    const products = useApi({ method: 'get', url: '/products' }) as Product[];
+    const products = useApi({
+        method: 'get',
+        url: '/products',
+        params: { _limit: 8, _page: 1 },
+    }) as Product[];
 
     const container = {
         hidden: { opacity: 1 },
@@ -59,6 +64,8 @@ const ProductSection = () => {
                         </motion.div>
                     );
                 })}
+                
+                <InfinityScroll />
             </motion.div>
         </main>
     );

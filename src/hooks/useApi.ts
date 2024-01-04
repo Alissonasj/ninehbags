@@ -4,6 +4,10 @@ import { useEffect, useState } from 'react';
 interface ConfigAxios {
     method: 'get' | 'post' | 'put' | 'delete';
     url: string;
+    params?: {
+        _limit?: number;
+        _page?: number;
+    };
 }
 
 const useApi = (config: ConfigAxios) => {
@@ -16,9 +20,11 @@ const useApi = (config: ConfigAxios) => {
             try {
                 const response = await axios({
                     baseURL: 'http://localhost:5000/',
-                    signal: controller.signal,                    
+                    signal: controller.signal,
                     ...config,
                 });
+
+                console.log(response.headers);
 
                 setDataApi(response.data);
             } catch (error) {
