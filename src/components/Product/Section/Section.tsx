@@ -64,7 +64,7 @@ const ProductSection = () => {
                         </motion.div>
                     );
                 })}
-                
+                                
                 <InfinityScroll />
             </motion.div>
         </main>

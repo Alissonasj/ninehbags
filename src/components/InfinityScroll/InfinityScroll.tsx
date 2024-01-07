@@ -10,20 +10,20 @@ const InfinityScroll = () => {
     };
 
     useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {                
+                console.log('Observando... ', entry);
+            }
+        }, options);
+
         if (divRef.current) {
-            const observer = new IntersectionObserver(([entry]) => {
-                if (entry.isIntersecting) {
-                    console.log('Observando', entry);
-                }
-            }, options);
-
             observer.observe(divRef.current);
-
-            return () => {
-                observer.disconnect(); // Cleanup when the component unmounts
-            };
         }
-    }, [divRef.current]); // Include divRef.current in the dependency array
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
 
     return <div ref={divRef} />;
 };
