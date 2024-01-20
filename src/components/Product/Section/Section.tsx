@@ -1,8 +1,6 @@
-import InfinityScroll from '@components/InfinityScroll/InfinityScroll';
 import ProductCard from '@components/Product/Card';
 import useApi from '@hooks/useApi';
 import Product from '@myTypes/product';
-import { motion } from 'framer-motion';
 import ProductMenuNav from './Filter/Filter';
 
 const ProductSection = () => {
@@ -12,39 +10,14 @@ const ProductSection = () => {
         params: { _limit: 8, _page: 1 },
     }) as Product[];
 
-    const container = {
-        hidden: { opacity: 1 },
-        visible: {
-            opacity: 1,
-            transition: {
-                delayChildren: 0.5,
-            },
-        },
-    };
-
-    const item = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1,
-        },
-    };
-
     return (
         <main className='my-28'>
             <ProductMenuNav />
 
-            <motion.div
-                variants={container}
-                initial='hidden'
-                animate='visible'
-                className='grid grid-cols-4 gap-x-5 gap-y-10 lg:grid-cols-3 sm:grid-cols-2 s-sm:grid-cols-1'
-            >
+            <div className='grid grid-cols-4 gap-x-5 gap-y-10 lg:grid-cols-3 sm:grid-cols-2 s-sm:grid-cols-1'>
                 {products.map((product) => {
                     return (
-                        <motion.div
-                            whileHover={{ scale: 1.03 }}
-                            variants={item}
+                        <div
                             className='rounded-[5px] hover:shadow-md'
                             key={product.id}
                         >
@@ -61,12 +34,10 @@ const ProductSection = () => {
                                     </ProductCard.Price>
                                 </div>
                             </ProductCard.Wrapper>
-                        </motion.div>
+                        </div>
                     );
                 })}
-                                
-                <InfinityScroll />
-            </motion.div>
+            </div>
         </main>
     );
 };
