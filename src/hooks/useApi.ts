@@ -20,11 +20,9 @@ const useApi = (config: ConfigAxios) => {
             try {
                 const response = await axios({
                     baseURL: 'http://localhost:5000/',
-                    signal: controller.signal,
+                    signal: controller.signal,                                        
                     ...config,
                 });
-
-                console.log(response.headers);
 
                 setDataApi(response.data);
             } catch (error) {
