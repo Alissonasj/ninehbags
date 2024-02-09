@@ -8,13 +8,11 @@ const CustomLink = ({
     className,
     href = '#',
     children,
-    ...props
 }: CustomLinkProps) => {
     return (
         <Link
             to={href}
             className={twMerge('', className)}
-            {...props}
         >
             {children}
         </Link>

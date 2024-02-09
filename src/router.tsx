@@ -1,3 +1,4 @@
+import ProductSection from '@components/Product/Section/Section';
 import Contact from '@pages/Contact';
 import Home from '@pages/Home';
 import NotFound from '@pages/NotFound';
@@ -22,12 +23,16 @@ const router = createBrowserRouter(
                 element={<Home />}
             />
             <Route
-                path='product/:productId'
-                element={<ProductDetails />}
-            />
-            <Route
                 path='contact'
                 element={<Contact />}
+            />
+            <Route
+                path='products'
+                element={<ProductSection />}
+            />
+            <Route
+                path='products/product/:productId'
+                element={<ProductDetails />}
             />
         </Route>
     )

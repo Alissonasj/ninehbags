@@ -1,13 +1,16 @@
-import Template from '@styles/Template';
 import Banner from '@components/Banner/Banner';
-import ProductSection from '@components/Product/Section/Section';
+import MenuCard from '@components/Header/MenuCard/MenuCard';
+import Template from '@styles/Template';
 
 const Home = () => {
     return (
         <>
             <Banner />
             <Template>
-                <ProductSection />
+                <h1 className='py-10 text-center text-7xl'>
+                    Página de destaques
+                </h1>
+                <MenuCard />
             </Template>
         </>
     );

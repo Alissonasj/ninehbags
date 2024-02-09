@@ -20,7 +20,7 @@ const useApi = (config: ConfigAxios) => {
             try {
                 const response = await axios({
                     baseURL: 'http://localhost:5000/',
-                    signal: controller.signal,                                        
+                    signal: controller.signal,
                     ...config,
                 });
 
@@ -30,9 +30,9 @@ const useApi = (config: ConfigAxios) => {
             }
         })();
 
-        return () => {
-            controller.abort();
-        };
+        // return () => {
+        //     controller.abort();
+        // };
     }, []);
 
     return dataApi;

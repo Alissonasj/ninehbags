@@ -1,14 +1,9 @@
-import CustomLink from '@ui/CustomLink/CustomLink';
+interface ProductCardWrapperProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-interface ProductCardWrapperProps {
-    children?: React.ReactNode;
-    href?: string;
-}
-
-// my-transition hover:scale-105
-
-const ProductCardWrapper = ({ children, href }: ProductCardWrapperProps) => {
-    return <CustomLink href={href}>{children}</CustomLink>;
+const ProductCardWrapper = ({
+    children,
+}: ProductCardWrapperProps) => {
+    return <div>{children}</div>;
 };
 
 export default ProductCardWrapper;

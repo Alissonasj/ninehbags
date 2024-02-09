@@ -5,6 +5,9 @@ interface MenuNavProps {
 }
 
 const MenuNav = ({ hambugerIsOpen }: MenuNavProps) => {
+    const linkStyle = 'link-nav my-transition';
+    const liStyle = 'px-[0.625rem] py-[0.3125rem]';
+
     return (
         <nav
             className={`my-transition md:fixed md:-right-full md:top-0 md:z-40 md:flex
@@ -14,29 +17,30 @@ const MenuNav = ({ hambugerIsOpen }: MenuNavProps) => {
             <menu className='flex justify-center gap-5 md:flex-col md:justify-start [&_a.active]:border-primary'>
                 <NavLink
                     to='/'
-                    className='link-nav my-transition border-b-2 border-transparent hover:border-b-2 hover:border-primary'
+                    className={linkStyle}
                 >
-                    <li className='px-[0.625rem] py-[0.3125rem] text-gray-dark-800'>
-                        Inicio
-                    </li>
+                    <li className={liStyle}>Inicio</li>
+                </NavLink>
+
+                <NavLink
+                    to='/products'
+                    className={linkStyle}
+                >
+                    <li className={liStyle}>Produtos</li>
                 </NavLink>
 
                 <NavLink
                     to='/contact'
-                    className='link-nav my-transition border-b-2 border-transparent hover:border-b-2 hover:border-primary'
+                    className={linkStyle}
                 >
-                    <li className='px-[0.625rem] py-[0.3125rem] text-gray-dark-800'>
-                        Contato
-                    </li>
+                    <li className={liStyle}>Contato</li>
                 </NavLink>
 
                 <NavLink
-                    to='/sobre'
-                    className='link-nav my-transition border-b-2 border-transparent hover:border-b-2 hover:border-primary'
+                    to='/about'
+                    className={linkStyle}
                 >
-                    <li className='px-[0.625rem] py-[0.3125rem] text-gray-dark-800'>
-                        A Nineh
-                    </li>
+                    <li className={liStyle}>A Nineh</li>
                 </NavLink>
             </menu>
         </nav>
