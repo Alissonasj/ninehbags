@@ -1,77 +1,77 @@
-import { Link } from 'react-router-dom';
 import img from '@assets/imgs/product.jpg';
+import PATHS from 'paths';
+import { Link } from 'react-router-dom';
+import { twMerge } from 'tailwind-merge';
 
-const MenuCard = () => {
+interface MenuCardProps extends React.HTMLAttributes<HTMLDivElement> {}
+
+const MenuCard = ({ className }: MenuCardProps) => {
+    const menu = [
+        {
+            title: 'Modelo',
+            items: [
+                { name: 'Love', link: '#' },
+                { name: 'Moon', link: '#' },
+                { name: 'Baguete', link: '#' },
+            ],
+        },
+        {
+            title: 'Cor',
+            items: [
+                { name: 'Branca', link: '#' },
+                { name: 'Preta', link: '#' },
+                { name: 'Marron', link: '#' },
+            ],
+        },
+        {
+            title: 'Tamanho',
+            items: [
+                { name: 'Pequena', link: '#' },
+                { name: 'Média', link: '#' },
+                { name: 'Grande', link: '#' },
+            ],
+        },
+    ];
+
     return (
-        <div className='grid w-full grid-cols-2 bg-white'>
-            <div className='flex justify-center space-x-10 p-5'>
-                <div className='space-y-2'>
-                    <h4 className='mb-4 font-[700]'>Modelo</h4>
-                    <Link
-                        to={'#'}
-                        className='block py-1 font-[500]'
-                    >
-                        Love
-                    </Link>
-                    <Link
-                        to={'#'}
-                        className='block py-1 font-[500]'
-                    >
-                        Baguete
-                    </Link>
-                    <Link
-                        to={'#'}
-                        className='block py-1 font-[500]'
-                    >
-                        Moon
-                    </Link>
+        <div className={twMerge('flex flex-col bg-white pt-10', className)}>
+            <div className='flex gap-[10%]'>
+                <div className='ml-24 flex grow justify-between'>
+                    {menu.map((m) => {
+                        return (
+                            <ul key={m.title}>
+                                <li className='space-y-2'>
+                                    <h4 className='mb-4 font-[700]'>
+                                        {m.title}
+                                    </h4>
+                                    {m.items.map((i) => {
+                                        return (
+                                            <Link
+                                                to={i.link}
+                                                key={i.name}
+                                                className='link-nav my-transition block py-1'
+                                            >
+                                                {i.name}
+                                            </Link>
+                                        );
+                                    })}
+                                </li>
+                            </ul>
+                        );
+                    })}
                 </div>
-                <div className='space-y-2'>
-                    <h4 className='mb-4 font-[700]'>Cor</h4>
-                    <Link
-                        to={'#'}
-                        className='block py-1 font-[500]'
-                    >
-                        Preta
-                    </Link>
-                    <Link
-                        to={'#'}
-                        className='block py-1 font-[500]'
-                    >
-                        Branca
-                    </Link>
-                    <Link
-                        to={'#'}
-                        className='block py-1 font-[500]'
-                    >
-                        Marron
-                    </Link>
-                </div>
-                <div className='space-y-2'>
-                    <h4 className='mb-4 font-[700]'>Tamanho</h4>
-                    <Link
-                        to={'#'}
-                        className='block py-1 font-[500]'
-                    >
-                        Pequena
-                    </Link>
-                    <Link
-                        to={'#'}
-                        className='block py-1 font-[500]'
-                    >
-                        Média
-                    </Link>
-                    <Link
-                        to={'#'}
-                        className='block py-1 font-[500]'
-                    >
-                        Grande
-                    </Link>
+
+                <div className='max-w-80 justify-self-end'>
+                    <img src={img} />
                 </div>
             </div>
-            <div className='w-64 justify-self-end'>
-                <img src={img} />
-            </div>
+
+            <Link
+                to={PATHS.PRODUCTS}
+                className='bg-gray-200 py-3 pl-24 font-[700]'
+            >
+                Todas as bolsas
+            </Link>
         </div>
     );
 };

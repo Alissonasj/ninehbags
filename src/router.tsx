@@ -4,6 +4,7 @@ import Home from '@pages/Home';
 import NotFound from '@pages/NotFound';
 import ProductDetails from '@pages/ProductDetails';
 import App from 'App';
+import PATHS from 'paths';
 
 import {
     Route,
@@ -14,25 +15,29 @@ import {
 const router = createBrowserRouter(
     createRoutesFromChildren(
         <Route
-            path='/'
+            path={PATHS.HOME}
             element={<App />}
             errorElement={<NotFound />}
         >
             <Route
-                path='/'
+                path={PATHS.HOME}
                 element={<Home />}
             />
             <Route
-                path='contact'
+                path={PATHS.CONTACT}
                 element={<Contact />}
             />
             <Route
-                path='products'
+                path={PATHS.PRODUCTS}
                 element={<ProductSection />}
             />
             <Route
-                path='products/product/:productId'
+                path={PATHS.PRODUCT_DETAILS}
                 element={<ProductDetails />}
+            />
+            <Route
+                path={PATHS.ABOUT}
+                element={<h1>Sobre a Nineh</h1>}
             />
         </Route>
     )

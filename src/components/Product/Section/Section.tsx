@@ -14,7 +14,7 @@ const ProductSection = () => {
 
     return (
         <Template>
-            <h1 className='my-[6.25rem] text-4xl font-[700]'>Produtos</h1>
+            <h1 className='my-[6.25rem] text-4xl font-[700]'>Bolsas</h1>
 
             <div className='flex gap-10'>
                 <aside>

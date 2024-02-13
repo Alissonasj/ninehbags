@@ -30,9 +30,9 @@ const useApi = (config: ConfigAxios) => {
             }
         })();
 
-        // return () => {
-        //     controller.abort();
-        // };
+        return () => {
+            controller.abort();
+        };
     }, []);
 
     return dataApi;
