@@ -1,9 +1,10 @@
 import logo from '@assets/imgs/black_logo.svg';
 import { Squash as Hamburger } from 'hamburger-react';
-import PATHS from 'paths';
+import LINK_PATH from 'link-path';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import MenuNav from './MenuNav/MenuNav';
+import MenuNavDesktop from './MenuNav/Desktop/NavDesktop';
+import MenuNavMobile from './MenuNav/Mobile/NavMobile';
 
 const Header = () => {
     const [hambugerIsOpen, setHambugerIsOpen] = useState(false);
@@ -11,7 +12,7 @@ const Header = () => {
     return (
         <header className='sticky top-0 z-50 border-b-[1px] bg-gray-dark-50 px-20 py-5 md:px-5'>
             <div className='flex justify-between md:items-start'>
-                <Link to={PATHS.HOME}>
+                <Link to={LINK_PATH.HOME}>
                     <img src={logo} />
                 </Link>
 
@@ -22,7 +23,10 @@ const Header = () => {
                     />
                 </div>
 
-                <MenuNav hambugerIsOpen={hambugerIsOpen} />
+                <MenuNavDesktop />
+                <MenuNavMobile
+                    hambugerIsOpen={hambugerIsOpen}                    
+                />
             </div>
         </header>
     );

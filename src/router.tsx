@@ -4,7 +4,7 @@ import Home from '@pages/Home';
 import NotFound from '@pages/NotFound';
 import ProductDetails from '@pages/ProductDetails';
 import App from 'App';
-import PATHS from 'paths';
+import LINK_PATH from 'link-path';
 
 import {
     Route,
@@ -15,28 +15,28 @@ import {
 const router = createBrowserRouter(
     createRoutesFromChildren(
         <Route
-            path={PATHS.HOME}
+            path={LINK_PATH.HOME}
             element={<App />}
             errorElement={<NotFound />}
         >
             <Route
-                path={PATHS.HOME}
+                path={LINK_PATH.HOME}
                 element={<Home />}
             />
             <Route
-                path={PATHS.CONTACT}
+                path={LINK_PATH.CONTACT}
                 element={<Contact />}
             />
             <Route
-                path={PATHS.PRODUCTS}
+                path={LINK_PATH.PRODUCTS}
                 element={<ProductSection />}
             />
             <Route
-                path={PATHS.PRODUCT_DETAILS}
+                path={LINK_PATH.PRODUCT_DETAILS}
                 element={<ProductDetails />}
             />
             <Route
-                path={PATHS.ABOUT}
+                path={LINK_PATH.ABOUT}
                 element={<h1>Sobre a Nineh</h1>}
             />
         </Route>

@@ -1,4 +1,4 @@
-enum PATHS {
+enum LINK_PATH {
     HOME = '/',
     CONTACT = '/contato',
     PRODUCTS = '/bolsas',
@@ -7,4 +7,4 @@ enum PATHS {
 }
 
 
-export default PATHS;
+export default LINK_PATH;

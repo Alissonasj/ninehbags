@@ -1,11 +1,8 @@
 import img from '@assets/imgs/product.jpg';
-import PATHS from 'paths';
+import LINK_PATH from 'link-path';
 import { Link } from 'react-router-dom';
-import { twMerge } from 'tailwind-merge';
 
-interface MenuCardProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-const MenuCard = ({ className }: MenuCardProps) => {
+const MenuNavDrawer = () => {
     const menu = [
         {
             title: 'Modelo',
@@ -34,9 +31,9 @@ const MenuCard = ({ className }: MenuCardProps) => {
     ];
 
     return (
-        <div className={twMerge('flex flex-col bg-white pt-10', className)}>
-            <div className='flex gap-[10%]'>
-                <div className='ml-24 flex grow justify-between'>
+        <div className='flex bg-white pt-10'>
+            <div className='flex grow flex-col gap-[10%]'>
+                <div className='flex grow justify-between px-20'>
                     {menu.map((m) => {
                         return (
                             <ul key={m.title}>
@@ -61,19 +58,19 @@ const MenuCard = ({ className }: MenuCardProps) => {
                     })}
                 </div>
 
-                <div className='max-w-80 justify-self-end'>
-                    <img src={img} />
-                </div>
+                <Link
+                    to={LINK_PATH.PRODUCTS}
+                    className='bg-gray-200 py-3 pl-20 font-[700]'
+                >
+                    Todas as bolsas
+                </Link>
             </div>
 
-            <Link
-                to={PATHS.PRODUCTS}
-                className='bg-gray-200 py-3 pl-24 font-[700]'
-            >
-                Todas as bolsas
-            </Link>
+            <div className='max-w-80 justify-self-end'>
+                <img src={img} />
+            </div>
         </div>
     );
 };
 
-export default MenuCard;
+export default MenuNavDrawer;
