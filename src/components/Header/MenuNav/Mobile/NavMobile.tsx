@@ -1,58 +1,78 @@
 import LINK_PATH from 'link-path';
-import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { twMerge } from 'tailwind-merge';
+import MenuNavDrawer from './Drawer';
 
 interface MenuNavMobileProps {
     hambugerIsOpen: boolean;
 }
 
 const MenuNavMobile = ({ hambugerIsOpen }: MenuNavMobileProps) => {
+    const [menuDrowerIsOpen, setMenuDrowerOpen] = useState(false);
+
+    hambugerIsOpen
+        ? (document.body.style.overflow = 'hidden')
+        : (document.body.style.overflow = 'auto');
+
     return (
-        <nav
-            className={`my-transition fixed -right-full top-0 z-40 hidden h-[100vh]
-                    w-full  bg-gray-dark-50 md:flex
-                    ${hambugerIsOpen ? '-translate-x-full' : 'translate-x-0'}`}
+        <div
+            className={twMerge(
+                'my-transition fixed right-0 top-32 hidden h-[calc(100%-8rem)] w-full translate-x-full bg-gray-dark-50 md:grid',
+                `${hambugerIsOpen && 'translate-x-0'}`
+            )}
         >
-            <menu className='mt-[127px] flex grow flex-col gap-5 [&_a.active]:border-primary'>
-                <li className='group flex'>
-                    <NavLink
-                        to={LINK_PATH.HOME}
-                        className='link-nav my-transition flex w-full justify-between self-center bg-gray-dark-200 p-5 font-[700]'
-                    >
-                        Início
-                    </NavLink>
-                </li>
+            <div>
+                <nav>
+                    <menu className='flex flex-col gap-5'>
+                        <li className='flex'>
+                            <Link
+                                to={LINK_PATH.HOME}
+                                className='link-nav my-transition flex w-full justify-between self-center bg-gray-dark-200 p-5 font-[700]'
+                            >
+                                Início
+                            </Link>
+                        </li>
 
-                <li className='group flex'>
-                    <NavLink
-                        to={LINK_PATH.PRODUCTS}
-                        className='link-nav my-transition flex w-full justify-between self-center bg-gray-dark-200 p-5 font-[700]'
-                    >
-                        Bolsas
-                        <p>T</p>
-                    </NavLink>
+                        <li className='flex'>
+                            <button
+                                onClick={() =>
+                                    setMenuDrowerOpen(!menuDrowerIsOpen)
+                                }
+                                className='link-nav my-transition flex w-full justify-between self-center bg-gray-dark-200 p-5 font-[700]'
+                            >
+                                Bolsas
+                                <p>Icone</p>
+                            </button>
 
-                    {/* <MenuNavDrawer /> */}
-                </li>
+                            <MenuNavDrawer
+                                menuDrowerClose={setMenuDrowerOpen}
+                                menuDrowerIsOpen={menuDrowerIsOpen}
+                            />
+                        </li>
 
-                <li className='group flex'>
-                    <NavLink
-                        to={LINK_PATH.CONTACT}
-                        className='link-nav my-transition flex w-full justify-between self-center bg-gray-dark-200 p-5 font-[700]'
-                    >
-                        Contato
-                    </NavLink>
-                </li>
+                        <li className='flex'>
+                            <Link
+                                to={LINK_PATH.CONTACT}
+                                className='link-nav my-transition flex w-full justify-between self-center bg-gray-dark-200 p-5 font-[700]'
+                            >
+                                Contato
+                            </Link>
+                        </li>
 
-                <li className='group flex'>
-                    <NavLink
-                        to={LINK_PATH.ABOUT}
-                        className='link-nav my-transition flex w-full justify-between self-center bg-gray-dark-200 p-5 font-[700]'
-                    >
-                        A Nineh
-                    </NavLink>
-                </li>
-            </menu>
-        </nav>
+                        <li className='flex'>
+                            <Link
+                                to={LINK_PATH.ABOUT}
+                                className='link-nav my-transition flex w-full justify-between self-center bg-gray-dark-200 p-5 font-[700]'
+                            >
+                                A Nineh
+                            </Link>
+                        </li>
+                    </menu>
+                </nav>
+            </div>
+            <div className='self-end'>RODAPE</div>
+        </div>
     );
 };
 

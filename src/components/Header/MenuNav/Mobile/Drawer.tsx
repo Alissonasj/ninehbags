@@ -1,8 +1,17 @@
 import img from '@assets/imgs/product.jpg';
 import LINK_PATH from 'link-path';
 import { Link } from 'react-router-dom';
+import { twMerge } from 'tailwind-merge';
 
-const MenuNavDrawer = () => {
+interface MenuDrawerProps {
+    menuDrowerClose: React.Dispatch<React.SetStateAction<boolean>>;
+    menuDrowerIsOpen: boolean;
+}
+
+const MenuNavDrawer = ({
+    menuDrowerIsOpen,
+    menuDrowerClose,
+}: MenuDrawerProps) => {
     const menu = [
         {
             title: 'Modelo',
@@ -31,13 +40,25 @@ const MenuNavDrawer = () => {
     ];
 
     return (
-        <div className='flex bg-white pt-10'>
-            <div className='flex grow flex-col gap-[10%]'>
-                <div className='flex grow justify-between px-20'>
+        <div
+            className={twMerge(
+                'my-transition fixed top-0 flex h-full w-full  translate-x-full flex-col bg-white',
+                `${menuDrowerIsOpen && 'translate-x-0'}`
+            )}
+        >
+            <button
+                onClick={() => menuDrowerClose(!menuDrowerClose)}
+                className='bg-gray-200 py-3 pl-20 font-[700]'
+            >
+                Voltar
+            </button>
+
+            <div className='grow overflow-y-scroll'>
+                <div className='px-5'>
                     {menu.map((m) => {
                         return (
                             <ul key={m.title}>
-                                <li className='space-y-2'>
+                                <li className='mb-5 space-y-2'>
                                     <h4 className='mb-4 font-[700]'>
                                         {m.title}
                                     </h4>
@@ -46,7 +67,7 @@ const MenuNavDrawer = () => {
                                             <Link
                                                 to={i.link}
                                                 key={i.name}
-                                                className='link-nav my-transition block py-1'
+                                                className='link-nav my-transition block'
                                             >
                                                 {i.name}
                                             </Link>
@@ -57,14 +78,14 @@ const MenuNavDrawer = () => {
                         );
                     })}
                 </div>
-
-                <Link
-                    to={LINK_PATH.PRODUCTS}
-                    className='bg-gray-200 py-3 pl-20 font-[700]'
-                >
-                    Todas as bolsas
-                </Link>
             </div>
+
+            <Link
+                to={LINK_PATH.PRODUCTS}
+                className='bg-gray-200 py-3 pl-5 font-[700]'
+            >
+                Todas as bolsas
+            </Link>
 
             <div className='max-w-80 justify-self-end'>
                 <img src={img} />

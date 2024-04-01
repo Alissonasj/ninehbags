@@ -7,26 +7,28 @@ import MenuNavDesktop from './MenuNav/Desktop/NavDesktop';
 import MenuNavMobile from './MenuNav/Mobile/NavMobile';
 
 const Header = () => {
-    const [hambugerIsOpen, setHambugerIsOpen] = useState(false);
+    const [hambugerIsOpen, setHambugerOpen] = useState(false);
 
     return (
-        <header className='sticky top-0 z-50 border-b-[1px] bg-gray-dark-50 px-20 py-5 md:px-5'>
-            <div className='flex justify-between md:items-start'>
-                <Link to={LINK_PATH.HOME}>
+        <header className='sticky top-0 z-50 h-32 border-b-[1px] bg-gray-dark-50'>
+            <div className='flex justify-between px-20 md:place-items-center md:px-5'>
+                <Link
+                    to={LINK_PATH.HOME}
+                    className='py-5'
+                >
                     <img src={logo} />
                 </Link>
 
-                <div className='relative z-50 hidden text-gray-dark-700 md:block'>
+                <span className='z-40 hidden text-gray-dark-700 md:block'>
                     <Hamburger
-                        toggle={setHambugerIsOpen}
+                        toggle={setHambugerOpen}
                         toggled={hambugerIsOpen}
                     />
-                </div>
+                </span>
 
                 <MenuNavDesktop />
-                <MenuNavMobile
-                    hambugerIsOpen={hambugerIsOpen}                    
-                />
+
+                <MenuNavMobile hambugerIsOpen={hambugerIsOpen} />
             </div>
         </header>
     );
