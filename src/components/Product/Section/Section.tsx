@@ -4,7 +4,7 @@ import Product from '@myTypes/product';
 import Template from '@styles/Template';
 import { Suspense } from 'react';
 import { Link } from 'react-router-dom';
-import ProductMenuNav from './Filter/Filter';
+import ProductSectionFilter from './Filter/Filter';
 
 const ProductSection = () => {
     const products: Product[] = useApi({
@@ -18,7 +18,7 @@ const ProductSection = () => {
 
             <div className='flex gap-10'>
                 <aside>
-                    <ProductMenuNav />
+                    <ProductSectionFilter />
                 </aside>
 
                 <Suspense fallback={'Loading...'}>
@@ -27,7 +27,7 @@ const ProductSection = () => {
                             return (
                                 <Link
                                     key={product.id}
-                                    to={`product/${product.id}`}
+                                    to={`bolsa/${product.id}`}
                                     className='rounded-[5px] hover:shadow-md'
                                 >
                                     <ProductCard.Wrapper>

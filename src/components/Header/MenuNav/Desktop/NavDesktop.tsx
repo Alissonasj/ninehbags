@@ -1,4 +1,4 @@
-import LINK_PATH from 'link-path';
+import LinkPath from 'link-path';
 import { NavLink } from 'react-router-dom';
 import MenuCard from './NavList';
 
@@ -6,19 +6,19 @@ const MenuNavDesktop = () => {
     const menu = [
         {
             title: 'Inicio',
-            link: `${LINK_PATH.HOME}`,
+            link: `${LinkPath.HOME}`,
         },
         {
             title: 'Bolsas',
-            link: `${LINK_PATH.PRODUCTS}`,
+            link: `${LinkPath.PRODUCTS}`,
         },
         {
             title: 'Contato',
-            link: `${LINK_PATH.CONTACT}`,
+            link: `${LinkPath.CONTACT}`,
         },
         {
             title: 'A Nineh',
-            link: `${LINK_PATH.ABOUT}`,
+            link: `${LinkPath.ABOUT}`,
         },
     ];
 

@@ -1,5 +1,5 @@
 import bannerDesktop from '@assets/imgs/banner_desk.jpg';
-import CustomLink from '@ui/CustomLink/CustomLink';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -9,9 +9,12 @@ const Banner = () => {
                 className='h-full w-full object-cover object-center'
             />
 
-            <CustomLink className='link-button absolute bottom-[5%] left-[50%] translate-x-[-50%] translate-y-[-50%] hover:bg-gray-dark-800'>
+            <Link
+                to='#'
+                className='link-button absolute bottom-[5%] left-[50%] translate-x-[-50%] translate-y-[-50%] hover:bg-gray-dark-800'
+            >
                 Novidade
-            </CustomLink>
+            </Link>
         </div>
     );
 };

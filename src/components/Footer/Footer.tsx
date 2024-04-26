@@ -3,7 +3,8 @@ import instagram from '@assets/imgs/instagram.svg';
 import whatsappFixed from '@assets/imgs/whatsapp-fixed.svg';
 import whatsapp from '@assets/imgs/whatsapp.svg';
 import logo from '@assets/imgs/white_logo.svg';
-import CustomLink from '@ui/CustomLink/CustomLink';
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
     return (
@@ -42,17 +43,23 @@ const Footer = () => {
                             </h4>
                         </li>
 
-                        <CustomLink>
+                        <Link
+                            to='#'
+                        >
                             <li>Link</li>
-                        </CustomLink>
+                        </Link>
 
-                        <CustomLink>
+                        <Link
+                            to='#'
+                        >
                             <li>Link</li>
-                        </CustomLink>
+                        </Link>
 
-                        <CustomLink>
+                        <Link
+                            to='#'
+                        >
                             <li>Link</li>
-                        </CustomLink>
+                        </Link>
                     </ul>
 
                     <ul>
@@ -60,17 +67,23 @@ const Footer = () => {
                             <h4 className='mb-3 font-bold uppercase'>Sobre</h4>
                         </li>
 
-                        <CustomLink>
+                        <Link
+                            to='#'
+                        >
                             <li>Link</li>
-                        </CustomLink>
+                        </Link>
 
-                        <CustomLink>
+                        <Link
+                            to='#'
+                        >
                             <li>Link</li>
-                        </CustomLink>
+                        </Link>
 
-                        <CustomLink>
+                        <Link
+                            to='#'
+                        >
                             <li>Link</li>
-                        </CustomLink>
+                        </Link>
                     </ul>
 
                     <ul>
@@ -81,32 +94,41 @@ const Footer = () => {
                         </li>
 
                         <div className='flex flex-row gap-3'>
-                            <CustomLink>
+                            <Link
+                                to='#'
+                                target='_blank'
+                            >
                                 <li>
                                     <img
                                         src={whatsapp}
                                         className='h-5 w-5'
                                     />
                                 </li>
-                            </CustomLink>
+                            </Link>
 
-                            <CustomLink>
+                            <Link
+                                to='#'
+                                target='_blank'
+                            >
                                 <li>
                                     <img
                                         src={instagram}
                                         className='h-5 w-5'
                                     />
                                 </li>
-                            </CustomLink>
+                            </Link>
 
-                            <CustomLink>
+                            <Link
+                                to='#'
+                                target='_blank'
+                            >
                                 <li>
                                     <img
                                         src={facebook}
                                         className='h-5 w-5'
                                     />
                                 </li>
-                            </CustomLink>
+                            </Link>
                         </div>
                     </ul>
                 </div>

@@ -1,4 +1,4 @@
-import LINK_PATH from 'link-path';
+import LinkPath from 'link-path';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { twMerge } from 'tailwind-merge';
@@ -27,7 +27,7 @@ const MenuNavMobile = ({ hambugerIsOpen }: MenuNavMobileProps) => {
                     <menu className='flex flex-col gap-5'>
                         <li className='flex'>
                             <Link
-                                to={LINK_PATH.HOME}
+                                to={LinkPath.HOME}
                                 className='link-nav my-transition flex w-full justify-between self-center bg-gray-dark-200 p-5 font-[700]'
                             >
                                 Início
@@ -53,7 +53,7 @@ const MenuNavMobile = ({ hambugerIsOpen }: MenuNavMobileProps) => {
 
                         <li className='flex'>
                             <Link
-                                to={LINK_PATH.CONTACT}
+                                to={LinkPath.CONTACT}
                                 className='link-nav my-transition flex w-full justify-between self-center bg-gray-dark-200 p-5 font-[700]'
                             >
                                 Contato
@@ -62,7 +62,7 @@ const MenuNavMobile = ({ hambugerIsOpen }: MenuNavMobileProps) => {
 
                         <li className='flex'>
                             <Link
-                                to={LINK_PATH.ABOUT}
+                                to={LinkPath.ABOUT}
                                 className='link-nav my-transition flex w-full justify-between self-center bg-gray-dark-200 p-5 font-[700]'
                             >
                                 A Nineh

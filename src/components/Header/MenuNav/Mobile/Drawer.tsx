@@ -1,5 +1,5 @@
 import img from '@assets/imgs/product.jpg';
-import LINK_PATH from 'link-path';
+import LinkPath from 'link-path';
 import { Link } from 'react-router-dom';
 import { twMerge } from 'tailwind-merge';
 
@@ -81,7 +81,7 @@ const MenuNavDrawer = ({
             </div>
 
             <Link
-                to={LINK_PATH.PRODUCTS}
+                to={LinkPath.PRODUCTS}
                 className='bg-gray-200 py-3 pl-5 font-[700]'
             >
                 Todas as bolsas
